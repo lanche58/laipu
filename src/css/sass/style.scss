@@ -1,3 +1,36 @@
 @charset "utf-8";
 @import "color";
 @import "repeat";
+.mtop{ height: 88px; }
+.header{
+    height: 88px; line-height: 24px;
+    .logo{ height: 100%; width: 240px; float: left; background: $mc1; 
+        > img{ display: block; margin: 20px 0 0 45px; width: 143px; }
+    }
+    .h-news{ float: right; height: 100%; width: 666/1920*100%; background: $fc1; }
+    .c{ overflow: hidden; }
+    .nav{
+        overflow: hidden;
+        li{ float: left; padding: 0 (34px - 12px) /2;
+            > a{ display: block; position: relative; padding: (88px - 24px) /2 6px; color: $fc1; 
+                &:before{ @include ba; bottom: 0; left: 50%; width: 0; height: 1px; background: $mc2; transition: 300ms; }
+            }
+            &:hover{
+                > a{
+                    color: $mc2;
+                    &:before{ left: 0; width: 100%; }
+                }
+            }
+        }
+    }
+}
+.h-news{
+    .item{
+        padding: 32px 60px 0 50px;
+        > a{ display: block; color: #fff; overflow: hidden; 
+            &:hover{ color: $mc1; }
+        }
+    }
+    .date{ float: right; margin-left: 20px; }
+    .nowti{ line-height: 24px; }
+}

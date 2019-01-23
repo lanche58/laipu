@@ -123,8 +123,8 @@ a {
 .pic2 > img { display: block; width: 100%; }
 /* .aico{ display: inline-block; background: url(../images/aicos.png); } */
 /* .bico{ display: inline-block; background: url(../images/bicos.png); } */
-.logo { display: block; }
-.logo > img { display: block; width: 100%; }
+.logo { display: block; transition: 0ms; }
+/* .logo > img { display: block; width: 100%; } */
 .now{ white-space: nowrap; }
 .nowti { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; line-height: 1.4; }
 .freeTx { overflow: hidden; position: relative; text-align: justify; }

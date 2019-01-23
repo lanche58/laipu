@@ -1,15 +1,22 @@
 <div class="header clearfix">
+
+
     <a href="index.html" class="logo"><img src="images/logo.png"/></a>
-    <ul class="nav">
-        <li><a href="index.html" @@if (context.index==='act') { class="act" }>首页</a></li>
-        <li><a href="about.html" @@if (context.about==='act') { class="act" }>关于皓源</a></li>
-        <li><a href="news.html" @@if (context.news==='act') { class="act" }>皓源动态</a></li>
-        <li><a href="pro.html" @@if (context.pro==='act') { class="act" }>产品中心</a></li>
-        <li><a href="case.html" @@if (context.case==='act') { class="act" }>案例中心</a></li>
-        <li><a href="ser.html" @@if (context.ser==='act') { class="act" }>服务中心</a></li>
-        <li><a href="job.html" @@if (context.job==='act') { class="act" }>加入我们</a></li>
-        <li><a href="cta.html" @@if (context.cta==='act') { class="act" }>联系我们</a></li>
-    </ul>
+    <div class="h-news u-slick">
+        <div class="item"><a href="news-detail.html"><p class="date">2018-11-15</p><h3 class="nowti">- 成都铼谱科技有限公司于高新区天府生命科技园购地重组正式成立</h3></a></div>
+        <div class="item"><a href="news-detail.html"><p class="date">2018-11-15</p><h3 class="nowti">- 成都铼谱科技有限公司于高新区天府生命科技园购地重组正式成立</h3></a></div>
+        <div class="item"><a href="news-detail.html"><p class="date">2018-11-15</p><h3 class="nowti">- 成都铼谱科技有限公司于高新区天府生命科技园购地重组正式成立</h3></a></div>
+    </div>
+    <div class="c">
+        <ul class="nav">
+            <li><a href="about.html" @@if (context.about==='act') { class="act" }>关于铼谱</a></li>
+            <li><a href="news.html" @@if (context.news==='act') { class="act" }>新闻中心</a></li>
+            <li><a href="pro.html" @@if (context.pro==='act') { class="act" }>产品·案例</a></li>
+            <li><a href="case.html" @@if (context.case==='act') { class="act" }>解决方案</a></li>
+            <li><a href="ser.html" @@if (context.ser==='act') { class="act" }>服务·支持</a></li>
+            <li><a href="cta.html" @@if (context.cta==='act') { class="act" }>联系我们</a></li>
+        </ul>
+    </div>
     <div class="menu-handler">
         <span class="burger burger-1 mtrans"></span>
         <span class="burger burger-2 mtrans"></span>

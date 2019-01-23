@@ -67,6 +67,14 @@ $(window).resize(function () {
 });
 
 $(function () {
+    $('.h-news').slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 10000,
+        cssEase: 'linear',
+        pauseOnHover: false
+    });
 	
 	
 
