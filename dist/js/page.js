@@ -75,6 +75,12 @@ $(function () {
         cssEase: 'linear',
         pauseOnHover: false
     });
+
+    if ($('.splwo').length !== 0) {
+        $('.splwo').each(function(i) {
+            splitWords($(this));
+        });
+    }
 	
 	
 
@@ -307,7 +313,10 @@ function splitWords(el) {
         for (var j = 0; j < _test[i].length; j++) {
             _span.eq(i).append('<i></i>');
             var _i = _span.eq(i).find('i');
-            _i.eq(j).text(_test[i][j]).css({
+            if (_test[i][j] === " ") {
+                _test[i][j] = "&nbsp;";
+            }
+            _i.eq(j).html(_test[i][j]).css({
                 'animation-delay': 100*j + 'ms',
                 '-webkit-animation-delay': 100*j + 'ms'
             });

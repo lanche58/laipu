@@ -1,6 +1,10 @@
 @media screen and (max-width:1600px) {} /* 1600 */
 @media screen and (max-width:1440px) {} /* 1440 */
-@media screen and (max-width:1366px) {} /* 1366 */
+@media screen and (max-width:1366px) {
+    .ab1 .charac-list{ margin-right: 0; }
+    .ab1 .freeTx{ margin: 0; overflow: hidden; }
+    
+} /* 1366 */
 @media screen and (max-width:1281px) {} /* 1281 */
 @media screen and (max-width:1024px) {} /* 1024 */
 @media screen and (max-width:861px) {} /* 861 */

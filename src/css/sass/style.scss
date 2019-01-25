@@ -7,20 +7,27 @@
     .logo{ height: 100%; width: 240px; float: left; background: $mc1; 
         > img{ display: block; margin: 20px 0 0 45px; width: 143px; }
     }
-    .h-news{ float: right; height: 100%; width: 666/1920*100%; background: $fc1; }
-    .c{ overflow: hidden; }
+    .h-news{ float: right; height: 100%; width: 34%; background: $fc1; }
+    .c{ margin: 0 34% 0 240px; }
     .nav{
-        overflow: hidden;
-        li{ float: left; padding: 0 (34px - 12px) /2;
+        padding-left: 11.5%; float: left;
+        li{ position: relative; float: left; padding: 0 (34px - 12px) /2;
             > a{ display: block; position: relative; padding: (88px - 24px) /2 6px; color: $fc1; 
-                &:before{ @include ba; bottom: 0; left: 50%; width: 0; height: 1px; background: $mc2; transition: 300ms; }
+                &:before{ @include line-lr(1px,$mc2); }
             }
             &:hover{
                 > a{
                     color: $mc2;
-                    &:before{ left: 0; width: 100%; }
+                    &:before{ @include line-lr-h; }
                 }
+                .pull-nav{ transform: none; @include show; }
             }
+        }
+    }
+    .pull-nav{
+        position: absolute; left: 50%; top: 100%; padding: 10px 0; margin-left: -80px; width: 160px; border-top: 1px solid $hc2; background: #fff; box-shadow: 0 3px 5px rgba(0,0,0,.2); transform: translateY(20px); @include hide; @include mt3;
+        a{ display: block; padding: (29px - 19px) / 2 5%; line-height: 1.4; text-align: center; 
+            &:hover{ color: $mc2; }
         }
     }
 }
@@ -33,4 +40,67 @@
     }
     .date{ float: right; margin-left: 20px; }
     .nowti{ line-height: 24px; }
+}
+.header{ display: none; }
+
+.pbanner{
+    .txts{ position: absolute; top: 0; bottom: 0; left: 5%; right: 5%; color: #fff; }
+    .ch{ font-size: 30px; }
+}
+@keyframes fadeIn{
+    0%{ opacity: 0; }
+    100%{ opacity: 1; }
+}
+.active .fadeIn i{ animation: fadeIn 1s both; }
+
+.pnav{ border-bottom: 1px solid $hc1; line-height: 24px; 
+    li{ padding: 0 12px; 
+        > a{ display: block; position: relative; padding: 19px 6px; 
+            &:before{ @include line-lr(1px,$mc2); }
+            &.act{
+                color: $mc2;
+                &:before{ @include line-lr-h; }
+            }
+        }
+    }
+}
+@media screen and (min-width:1025px) {
+    .pnav li>a:hover{ color: $mc2; }
+    .pnav li>a:hover:before{ @include line-lr-h; }
+}
+.page-pa{ padding: 70px 0 90px 0; }
+.ab1{
+    .freeTx{ width: 780px; max-width: 100%; margin: 0 auto; overflow: visible; }
+    .ab-ti{ margin-bottom: 50px - 15px; }
+    .charac-list{ float: right; margin-right: (100px / 1490px) * 100%; }
+    .ab-video{ margin-top: 60px; }
+}
+.ab-ti{ line-height: 1.4; font-size: 36px; color: $fc1; }
+.charac-list{
+    li{ position: relative; @include c(84px); @include bs; padding-top: 16px - 7px; border: 1px solid $hc1; font-size: 12px; text-align: center; 
+        &:before{ @include circle-scale($mc1); }
+        + li{ margin-top: 15px; }
+    }
+    .ico{ display: block; height: 40px; }
+    i, p{ position: relative; }
+}
+@media screen and (min-width:1025px) {
+    .charac-list li:hover:before{ @include circle-scale-h; } 
+    .charac-list li:hover{ color: #fff; }
+    .charac-list li:hover .ico{ background-position: center bottom; }
+}
+.ab-video{ position: relative; padding-bottom: (570 / 1490) * 100%; overflow: hidden; }
+#playing{ position: absolute; @include tblr; }
+.video-btn{
+    display: block; position: absolute; top: 50%; left: 50%; margin: -31px 0 0 -31px; width: 62px; height: 62px; color: #fff;
+    &:before, &:after{ @include ba; @include tblr; border-radius: 50%; border: 3px solid #fff; transition-timing-function: cubic-bezier(.215,.61,.355,1); }
+    &:before{ transform: scale(.8); @include hide; }
+    .sj{ display: block; margin: (62px - 20px) / 2 0 0 25px; border-top-width: 10px; border-bottom-width: 10px; border-left-width: 12px; }
+}
+@media screen and (min-width:1025px) {
+    .video-btn:hover{
+        &:before, &:after{ transition-duration: 1.2s; }
+        &:before{ transform: none; @include show; }
+        &:after{ transform: scale(1.4); @include hide; }
+    }
 }
