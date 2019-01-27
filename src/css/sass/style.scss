@@ -3,17 +3,22 @@
 @import "repeat";
 .mtop{ height: 88px; }
 .header{
-    height: 88px; line-height: 24px;
+    height: 88px;  line-height: 24px;
     .logo{ height: 100%; width: 240px; float: left; background: $mc1; 
         > img{ display: block; margin: 20px 0 0 45px; width: 143px; }
     }
     .h-news{ float: right; height: 100%; width: 34%; background: $fc1; }
-    .c{ margin: 0 34% 0 240px; }
+    .c{ position: relative; margin: 0 34% 0 240px; height: 100%; }
+    .bodr{ display: block; position: absolute; z-index: 19; left: 0; right: 0; bottom: 0; height: 1px; background: $hc2; }
     .nav{
-        padding-left: 11.5%; float: left;
-        li{ position: relative; float: left; padding: 0 (34px - 12px) /2;
+        padding-left: 6%; float: left; background: #fff;
+        li{ position: relative; padding: 0 (34px - 12px) /2; float: left; 
             > a{ display: block; position: relative; padding: (88px - 24px) /2 6px; color: $fc1; 
-                &:before{ @include line-lr(1px,$mc2); }
+                &:before{ @include line-lr(1px,$mc2); z-index: 29; }
+                &.act{
+                    color: $mc2;
+                    &:before{ @include line-lr-h; }
+                }
             }
             &:hover{
                 > a{
@@ -25,10 +30,75 @@
         }
     }
     .pull-nav{
-        position: absolute; left: 50%; top: 100%; padding: 10px 0; margin-left: -80px; width: 160px; border-top: 1px solid $hc2; background: #fff; box-shadow: 0 3px 5px rgba(0,0,0,.2); transform: translateY(20px); @include hide; @include mt3;
+        position: absolute; z-index: -1; left: 50%; top: 100%; padding: 10px 0; margin: -1px 0 0 -80px; width: 160px; border: 1px solid $hc2; @include bs; background: #fff; transform: translateY(-100%); @include hide; @include mt3;
         a{ display: block; padding: (29px - 19px) / 2 5%; line-height: 1.4; text-align: center; 
             &:hover{ color: $mc2; }
         }
+    }
+    .menu-btn,
+    .h-lang{ float: right; }
+}
+.h-lang{
+    position: relative; border-left: 1px solid $hc2; background: #fff; cursor: pointer;
+    > p{ padding: (88px - 24px)/2 35px; 
+        &:before{ @include line-lr(1px,$mc2); z-index: 29; }
+    }
+    .icon{ display: inline-block; vertical-align: bottom; margin-left: 10px; font-size: 12px; font-weight: bold; @include mt3; }
+    .b{ position: absolute; z-index: -1; left: -1px; right: 0; top: 100%; margin-top: -1px; border: 1px solid $hc2; padding: 10px 0; text-align: center; transform: translateY(-100%); @include hide; transition: 300ms; }
+    a{ display: block; 
+        &:hover{ color: $mc2; }
+    }
+    &:hover{
+        .b{ transform: none; @include show; }
+        > p:before{ @include line-lr-h; }
+        .icon{ transform: rotate(-180deg); }
+    }
+}
+.menu-btn{
+    display: none; width: 129px; padding: (88px - 24px) / 2 0; border-left: 1px solid $hc2; text-align: center; font-size: 12px; text-transform: uppercase;
+    .x2{ display: none; }
+    > p{ width: 50px; text-align: left; }
+    > p, > div{ @include di; }
+    .mbtn{ position: relative; margin-bottom: 6px; width: 12px; height: 12px; 
+        i{ display: block; position: absolute; top: 50%; left: 50%; margin: -1px 0 0 -8px; width: 16px; height: 2px;
+            &:before, &:after{ @include ba; top: 0; width: 2px; height: 2px; background: #000; @include mt3; }
+        }
+        .i1{ transform: rotate(45deg); 
+            &:before{ left: 0; }
+            &:after{ right: 0; }
+        }
+        .i2{ transform: rotate(-45deg); 
+            &:before{ left: 0; }
+            &:after{ right: 0; } 
+        }
+    }
+    &.active{
+        .x1{ display: none; }
+        .x2{ display: inline-block; }
+        .mbtn{
+            i:before,
+            i:after{ width: 8px; }
+        }
+    }
+}
+.menuBox{
+    text-align: center;
+    .navMobile{ padding-top: 115px; 
+        a{ display: block; line-height: 1.4; }
+    }
+    .lang{ display: none; font-size: 16px; }
+    dd > a{ padding: 0 5%; font-size: 18px; color: $fc1; 
+        p{ @include di; position: relative; padding: 12px 2px; 
+            &:before{ @include line-lr(1px,$mc2); }
+        }
+        &.act{
+            color: $mc2;
+            p:before{ @include line-lr-h; }
+        }
+    }
+    .mtv{
+        background: $mc3; padding: 10px 0; display: none;
+        a{ padding: 6px 5%; }
     }
 }
 .h-news{
@@ -41,8 +111,6 @@
     .date{ float: right; margin-left: 20px; }
     .nowti{ line-height: 24px; }
 }
-.header{ display: none; }
-
 .pbanner{
     .txts{ position: absolute; top: 0; bottom: 0; left: 5%; right: 5%; color: #fff; }
     .ch{ font-size: 30px; }
@@ -56,7 +124,7 @@
 .pnav{ border-bottom: 1px solid $hc1; line-height: 24px; 
     li{ padding: 0 12px; 
         > a{ display: block; position: relative; padding: 19px 6px; 
-            &:before{ @include line-lr(1px,$mc2); }
+            &:before{ @include line-lr(1px,$mc2);  }
             &.act{
                 color: $mc2;
                 &:before{ @include line-lr-h; }
@@ -103,4 +171,203 @@
         &:before{ transform: none; @include show; }
         &:after{ transform: scale(1.4); @include hide; }
     }
+}
+
+// footer
+.footer{
+    background: #fff; line-height: 24px;
+    .t{ background: $mc1; padding: (96px - 46px) / 2 0; color: #fff; 
+        a{ color: #fff; }
+    }
+    .f-share a{ color: $mc1; }
+    .logo{ float: left; width: 133px; }
+    .f-cta{ float: left; margin-left: 35px; width: 430px; }
+    .f-nav{ float: left; margin-left: 60px; }
+    .f-ma{ float: right; margin-top: -25px; }
+    .c{ padding: 50px 0 25px 0; border-bottom: 1px solid $hc2; }
+    .b{ padding: 11px 0; }
+}
+.f-share{
+    line-height: 46px;
+    a{ @include c(46px); background: $fc1; font-size: 24px; color: $mc1; 
+        + a{ margin-left: 2px; }
+    }
+    p{ margin-right: 20px; }
+}
+.f-cta{
+    p{ float: left; margin-right: 25px; }
+}
+.f-nav{
+    a{ float: left; margin-right: 35px; }
+}
+.f-ma{
+    line-height: 20px;
+    img{ width: 89px; border: 1px solid $hc2; float: left; }
+    p{ float: left; padding-top: 25px; margin-left: 10px; }
+}
+@media screen and (min-width:1025px) {
+    .f-share a:hover{ background: #fff; color: $mc1 !important; }
+    .footer a:not(.na):hover{ color: $mc2; }
+}
+#top{ position: fixed; right: 15px; bottom: 15px; @include c(40px); background: $mc11; line-height: 40px; text-align: center; color: #fff; text-transform: uppercase; font-size: 12px; display: none; }
+// footer end
+.ix1{
+    .ix-ab-ti{ float: left; width: 66%; 
+        .pa{ padding: 109px 0 0 240px; }
+    }
+    .ix-ab{ width: 34%; height: 330px; float: right; }
+    .fixbg{ padding-bottom: 35%; }
+}
+.ix-ab-ti{
+    color: $fc1;
+    .ti1{ font-size: 30px; }
+    .ti2{ font-size: 50px; }
+}
+.ix-ab{
+    position: relative; background: $mc1; color: #fff;
+    &:before{ @include hl($mc4, 100%); }
+    a{ display: block; position: relative; padding: 130px 50px 0 50px; @include bs; color: #fff; }
+    .nowti{ margin-bottom: 10px; font-size: 24px; }
+    .tx{ width: 420px; max-width: 100%; }
+    .ix-more{ margin-top: 50px; }
+}
+.btn-box{
+    line-height: 0;
+}
+.btn{
+    @include di;
+}
+.btn-sjr{ display: inline-block; position: relative; width: 18px; height: 2px; background: #fff; color: #fff; @include mt3;
+    &:before{ @include ba; left: 100%; top: 50%; margin-top: -4px; width: 0; height: 0; border-bottom: 4px solid transparent; border-top: 4px solid transparent; border-left: 4px solid; }
+}
+.ix-more{
+    overflow: hidden; line-height: 20px;
+    a{ color: #fff; }
+    .btn-sjr{ float: right; margin: 9px 4px 0 0; }
+    &.ix-more2{
+        a{ color: $mc2; }
+        .btn-sjr{ float: none; margin: 0 0 9px 20px; vertical-align: bottom; background: $mc2; color: $mc2; }
+    }
+    &.white{
+        .btn-sjr{ background: #fff; color: #fff;  }
+    }
+}
+@media screen and (min-width:1025px) {
+    .ix-ab:hover:before{ @include hlw; }
+    .ix-more:hover .btn-sjr,
+    .ix-ab:hover .btn-sjr{ transform: translateX(-10px); }
+}
+.ix-news{
+    width: 33.33%; float: left;
+    > a{ display: block; position: relative; padding: 70px 40px 0 40px; background: $mc3; @include bs; }
+    &.item1{
+        a{ height: 730px; }
+    }
+    &.item-bg1{
+        a{ background: $mc1; color: #fff; }
+        
+    }
+    .ti1{ margin-bottom: 6px; opacity: .6; }
+    .ti2{ margin-bottom: 60px; max-height: 60px; font-size: 24px; line-height: 30px !important; }
+    .num{ position: absolute; left: 40px; bottom: 20px; line-height: 1; }
+    .btn-box{ position: absolute; right: 40px; bottom: 20px; }
+    &.item2{
+        a{ background: #fff; height: 365px; }
+    }
+}
+.ix-date{
+    line-height: 24px;
+    i{ @include di; width: 25px; }
+    + .ix-date{ margin-top: 8px; }
+}
+.in-more{
+    position: relative; padding: 50px 6px 0 0;
+    img{ vertical-align: bottom; }
+    .btn-sjt{ position: absolute; top: 4px; left: 4px; }
+    &.white{  
+        .btn-sjt{ background: #fff; color: #fff; }
+        &:before{ background: #fff; }
+    }
+    &:before{ @include ba; right: 0; bottom: 0; height: 0; width: 1px; background: $fc2; @include mt3; }
+}
+.btn-sjt{
+    position: relative; display: block; width: 2px; height: 16px; background: $fc2; color: $fc2;
+    &:before{ @include ba; bottom: 100%; left: 50%; margin-left: -4px; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-bottom: 4px solid; }
+}
+@media screen and (min-width:1025px) {
+    .ix-news:hover .in-more:before{ height: 100%; }
+    .ix-news > a:hover{ background: $hc3; }
+    .ix-news.item-bg1 a:hover{ background: $mc4; }
+}
+.ix-news-list{
+    position: relative; padding: 70px 40px 0 40px; height: 365px; @include bs; background: $fc1; color: #fff;
+    a{ overflow: hidden; line-height: 30px; color: #fff; }
+    .b{
+        margin-bottom: 80px;
+        .nowti{ line-height: 30px; }
+    }
+    .date{ float: right; margin-left: 30px; }
+    > .nowti{ margin-bottom: 10px; }
+}
+@media screen and (min-width:1025px) {
+    .ix-news-list a:hover{ color: $mc1; }
+}
+.ix-pro{
+    width: 66.66%; float: left; border-bottom: 1px solid $hc2;
+    .ma{ border-left: 1px solid $hc2; margin-left: 12%; padding: 100px 0; }
+    .ix-more2,
+    .ip-ti{ padding: 0 17% 0 14%; }
+    .ip-ti{ margin-bottom: 50px; }
+    .ix-pro-list{ margin-bottom: 40px; }
+}
+.ip-ti{ line-height: 1.4; font-size: 50px; color: $fc1; }
+.ix-pro-list{
+    a{ display: block; position: relative; padding: 0 17% 0 14%; line-height: 24px; 
+        &:first-child .clearfix{ border-top: 1px solid $hc2; }
+    }
+    .clearfix{ border-bottom: 1px solid $hc2; padding: 28px 0; }
+    .line{ display: block; position: absolute; top: 0; left: -1px; width: 2px; height: 0; background: $mc1; @include mt3; }
+    .nowti{ line-height: 24px; font-size: 16px; color: $fc1; @include mt3; }
+    .icon{ float: right; margin-left: 30px; font-size: 14px; }
+}
+@media screen and (min-width:1025px) {
+    .ix-pro-list a:hover .line{ height: 100%; }
+    .ix-pro-list a:hover .nowti,
+    .ix-pro-list a:hover{ color: $mc2; }
+}
+.ix-pro-bg{ width: 33.33%; height: 868px; @include bg; float: left; }
+.ix-ser-list{
+    li{ width: 50%; float: left; 
+        + li .b{ border-left: 1px solid $mc6; }
+    }
+    .nowti{ padding-left: 20px; margin-bottom: 25px; line-height: 20px; color: $mc2; }
+    .b{ position: relative; height: 345px; padding: 55px 40px 0 40px; @include bs; background: $mc1; color: #fff; 
+        &:before{ @include hl($mc4, 100%); }
+    }
+    .tx{ position: relative; width: 576px; max-height: 60px; max-width: 100%; font-size: 24px; line-height: 30px !important; }
+    .ix-more{ position: relative; margin-top: 150px; }
+    .icon{ position: absolute; bottom: 55px; right: 40px; color: $mc5; line-height: 1; font-size: 56px; }
+}
+@media screen and (min-width:1025px) {
+    .ix-ser-list .b:hover:before{ @include hlw; }
+    .ix-ser-list .b:hover .ix-more .btn-sjr{ transform: translateX(-10px); } 
+    .ix-ser-list .b:hover .icon{ animation: logoShow .5s 1; }
+}
+.ix4{
+    padding-top: 55px; position: relative;
+    &:before{ @include ba; top: 99px; left: 0; right: 0; height: 1px; background: $hc2; }
+}
+.ix5{
+    border-top: 1px solid $hc2; padding: 0 0 100px 0;
+}
+.ix-cul-list{
+    overflow: visible;
+    &:after{ @include ba; z-index: 299; right: 50%; margin-right: 745px; top: 0; bottom: 0; width: 500px; background: #fff; }
+    .slick-list{ overflow: visible; }
+    .item{ width: 1120px; }
+    .ma{ margin-right: 5px; position: relative; color: #fff;
+        &:after{ @include ba; @include tblr; background: url(../images/shadow.png) repeat-x left bottom; }
+    }
+    .pai{ padding-bottom: (720 / 1120) * 100%; }
+    .nowti{ font-size: 18px; @include plr; padding: 0 40px; z-index: 9; bottom: 40px; }
 }

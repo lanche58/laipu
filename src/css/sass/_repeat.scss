@@ -38,8 +38,9 @@
 }
 @mixin hl($c,$h){
 	@include ba;
-	left: auto;
-	right: 0;
+	// left: auto;
+	// right: 0;
+	left: 0;
 	bottom: 0;
 	width: 0;
 	height: $h;
@@ -47,8 +48,8 @@
 	@include mt6;
 }
 @mixin hlw{
-	left: 0;
-	right: auto;
+	// left: 0;
+	// right: auto;
 	width: 100%;
 }
 @mixin hv($c,$w){
@@ -107,7 +108,7 @@
 @mixin line-lr($height, $color) {
 	@include ba;
 	bottom: 0;
-	left: 50%;
+	left: 0;
 	width: 0;
 	height: $height;
 	background: $color;
@@ -115,7 +116,6 @@
 }
 @mixin line-lr-h{
 	width: 100%;
-	left: 0;
 }
 
 @mixin circle-scale($color){

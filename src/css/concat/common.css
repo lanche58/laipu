@@ -57,12 +57,12 @@ a {
 	left: 0;
 	right: 0;
 	background: #fff;
-	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+	/* box-shadow: 0 0 5px rgba(0, 0, 0, .5); */
 }
 .menuBox {
 	position: fixed;
 	z-index: 1009;
-	top: 0;
+	top: -100%;
 	right: 0;
 	width: 100%;
 	height: 100%;
@@ -92,7 +92,10 @@ a {
 	}
 }
 /* pw */
-.pw { width: 1200px; margin: 0 auto; }
+.pw { width: 1490px; margin: 0 auto; }
+@media screen and (max-width:1600px) {
+	.pw { width: 1280px; }
+}
 @media screen and (max-width:1366px) {
 	.pw { width: 1000px; }
 }
