@@ -275,30 +275,30 @@ from,to{-webkit-transform:none;-moz-transform:none;transform:none}
 100%{background:-webkit-linear-gradient(330deg,transparent 85%,rgba(255,255,255,.5),transparent 115%);background:linear-gradient(120deg,transparent 85%,rgba(255,255,255,.5),transparent 115%)}
 }
 @-moz-keyframes _cyLogoShow{
-0%{background:-moz-linear-gradient(330deg,transparent -15%,rgba(255,255,255,.5),transparent 15%);background:linear-gradient(120deg,transparent -15%,rgba(255,255,255,.5),transparent 15%)}
-10%{background:-moz-linear-gradient(330deg,transparent -5%,rgba(255,255,255,.5),transparent 25%);background:linear-gradient(120deg,transparent -5%,rgba(255,255,255,.5),transparent 25%)}
-20%{background:-moz-linear-gradient(330deg,transparent 5%,rgba(255,255,255,.5),transparent 35%);background:linear-gradient(120deg,transparent 5%,rgba(255,255,255,.5),transparent 35%)}
-30%{background:-moz-linear-gradient(330deg,transparent 15%,rgba(255,255,255,.5),transparent 45%);background:linear-gradient(120deg,transparent 15%,rgba(255,255,255,.5),transparent 45%)}
-40%{background:-moz-linear-gradient(330deg,transparent 25%,rgba(255,255,255,.5),transparent 55%);background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.5),transparent 55%)}
-50%{background:-moz-linear-gradient(330deg,transparent 35%,rgba(255,255,255,.5),transparent 65%);background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.5),transparent 65%)}
-60%{background:-moz-linear-gradient(330deg,transparent 45%,rgba(255,255,255,.5),transparent 75%);background:linear-gradient(120deg,transparent 45%,rgba(255,255,255,.5),transparent 75%)}
-70%{background:-moz-linear-gradient(330deg,transparent 55%,rgba(255,255,255,.5),transparent 85%);background:linear-gradient(120deg,transparent 55%,rgba(255,255,255,.5),transparent 85%)}
-80%{background:-moz-linear-gradient(330deg,transparent 65%,rgba(255,255,255,.5),transparent 95%);background:linear-gradient(120deg,transparent 65%,rgba(255,255,255,.5),transparent 95%)}
-90%{background:-moz-linear-gradient(330deg,transparent 75%,rgba(255,255,255,.5),transparent 105%);background:linear-gradient(120deg,transparent 75%,rgba(255,255,255,.5),transparent 105%)}
-100%{background:-moz-linear-gradient(330deg,transparent 85%,rgba(255,255,255,.5),transparent 115%);background:linear-gradient(120deg,transparent 85%,rgba(255,255,255,.5),transparent 115%)}
+0%{background:-moz- oldlinear-gradient(330deg,transparent -15%,rgba(255,255,255,.5),transparent 15%);background:linear-gradient(120deg,transparent -15%,rgba(255,255,255,.5),transparent 15%)}
+10%{background:-moz- oldlinear-gradient(330deg,transparent -5%,rgba(255,255,255,.5),transparent 25%);background:linear-gradient(120deg,transparent -5%,rgba(255,255,255,.5),transparent 25%)}
+20%{background:-moz- oldlinear-gradient(330deg,transparent 5%,rgba(255,255,255,.5),transparent 35%);background:linear-gradient(120deg,transparent 5%,rgba(255,255,255,.5),transparent 35%)}
+30%{background:-moz- oldlinear-gradient(330deg,transparent 15%,rgba(255,255,255,.5),transparent 45%);background:linear-gradient(120deg,transparent 15%,rgba(255,255,255,.5),transparent 45%)}
+40%{background:-moz- oldlinear-gradient(330deg,transparent 25%,rgba(255,255,255,.5),transparent 55%);background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.5),transparent 55%)}
+50%{background:-moz- oldlinear-gradient(330deg,transparent 35%,rgba(255,255,255,.5),transparent 65%);background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.5),transparent 65%)}
+60%{background:-moz- oldlinear-gradient(330deg,transparent 45%,rgba(255,255,255,.5),transparent 75%);background:linear-gradient(120deg,transparent 45%,rgba(255,255,255,.5),transparent 75%)}
+70%{background:-moz- oldlinear-gradient(330deg,transparent 55%,rgba(255,255,255,.5),transparent 85%);background:linear-gradient(120deg,transparent 55%,rgba(255,255,255,.5),transparent 85%)}
+80%{background:-moz- oldlinear-gradient(330deg,transparent 65%,rgba(255,255,255,.5),transparent 95%);background:linear-gradient(120deg,transparent 65%,rgba(255,255,255,.5),transparent 95%)}
+90%{background:-moz- oldlinear-gradient(330deg,transparent 75%,rgba(255,255,255,.5),transparent 105%);background:linear-gradient(120deg,transparent 75%,rgba(255,255,255,.5),transparent 105%)}
+100%{background:-moz- oldlinear-gradient(330deg,transparent 85%,rgba(255,255,255,.5),transparent 115%);background:linear-gradient(120deg,transparent 85%,rgba(255,255,255,.5),transparent 115%)}
 }
 @keyframes _cyLogoShow{
-0%{background:-webkit-linear-gradient(330deg,transparent -15%,rgba(255,255,255,.5),transparent 15%);background:-moz-linear-gradient(330deg,transparent -15%,rgba(255,255,255,.5),transparent 15%);background:linear-gradient(120deg,transparent -15%,rgba(255,255,255,.5),transparent 15%)}
-10%{background:-webkit-linear-gradient(330deg,transparent -5%,rgba(255,255,255,.5),transparent 25%);background:-moz-linear-gradient(330deg,transparent -5%,rgba(255,255,255,.5),transparent 25%);background:linear-gradient(120deg,transparent -5%,rgba(255,255,255,.5),transparent 25%)}
-20%{background:-webkit-linear-gradient(330deg,transparent 5%,rgba(255,255,255,.5),transparent 35%);background:-moz-linear-gradient(330deg,transparent 5%,rgba(255,255,255,.5),transparent 35%);background:linear-gradient(120deg,transparent 5%,rgba(255,255,255,.5),transparent 35%)}
-30%{background:-webkit-linear-gradient(330deg,transparent 15%,rgba(255,255,255,.5),transparent 45%);background:-moz-linear-gradient(330deg,transparent 15%,rgba(255,255,255,.5),transparent 45%);background:linear-gradient(120deg,transparent 15%,rgba(255,255,255,.5),transparent 45%)}
-40%{background:-webkit-linear-gradient(330deg,transparent 25%,rgba(255,255,255,.5),transparent 55%);background:-moz-linear-gradient(330deg,transparent 25%,rgba(255,255,255,.5),transparent 55%);background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.5),transparent 55%)}
-50%{background:-webkit-linear-gradient(330deg,transparent 35%,rgba(255,255,255,.5),transparent 65%);background:-moz-linear-gradient(330deg,transparent 35%,rgba(255,255,255,.5),transparent 65%);background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.5),transparent 65%)}
-60%{background:-webkit-linear-gradient(330deg,transparent 45%,rgba(255,255,255,.5),transparent 75%);background:-moz-linear-gradient(330deg,transparent 45%,rgba(255,255,255,.5),transparent 75%);background:linear-gradient(120deg,transparent 45%,rgba(255,255,255,.5),transparent 75%)}
-70%{background:-webkit-linear-gradient(330deg,transparent 55%,rgba(255,255,255,.5),transparent 85%);background:-moz-linear-gradient(330deg,transparent 55%,rgba(255,255,255,.5),transparent 85%);background:linear-gradient(120deg,transparent 55%,rgba(255,255,255,.5),transparent 85%)}
-80%{background:-webkit-linear-gradient(330deg,transparent 65%,rgba(255,255,255,.5),transparent 95%);background:-moz-linear-gradient(330deg,transparent 65%,rgba(255,255,255,.5),transparent 95%);background:linear-gradient(120deg,transparent 65%,rgba(255,255,255,.5),transparent 95%)}
-90%{background:-webkit-linear-gradient(330deg,transparent 75%,rgba(255,255,255,.5),transparent 105%);background:-moz-linear-gradient(330deg,transparent 75%,rgba(255,255,255,.5),transparent 105%);background:linear-gradient(120deg,transparent 75%,rgba(255,255,255,.5),transparent 105%)}
-100%{background:-webkit-linear-gradient(330deg,transparent 85%,rgba(255,255,255,.5),transparent 115%);background:-moz-linear-gradient(330deg,transparent 85%,rgba(255,255,255,.5),transparent 115%);background:linear-gradient(120deg,transparent 85%,rgba(255,255,255,.5),transparent 115%)}
+0%{background:-webkit-linear-gradient(330deg,transparent -15%,rgba(255,255,255,.5),transparent 15%);background:-moz- oldlinear-gradient(330deg,transparent -15%,rgba(255,255,255,.5),transparent 15%);background:linear-gradient(120deg,transparent -15%,rgba(255,255,255,.5),transparent 15%)}
+10%{background:-webkit-linear-gradient(330deg,transparent -5%,rgba(255,255,255,.5),transparent 25%);background:-moz- oldlinear-gradient(330deg,transparent -5%,rgba(255,255,255,.5),transparent 25%);background:linear-gradient(120deg,transparent -5%,rgba(255,255,255,.5),transparent 25%)}
+20%{background:-webkit-linear-gradient(330deg,transparent 5%,rgba(255,255,255,.5),transparent 35%);background:-moz- oldlinear-gradient(330deg,transparent 5%,rgba(255,255,255,.5),transparent 35%);background:linear-gradient(120deg,transparent 5%,rgba(255,255,255,.5),transparent 35%)}
+30%{background:-webkit-linear-gradient(330deg,transparent 15%,rgba(255,255,255,.5),transparent 45%);background:-moz- oldlinear-gradient(330deg,transparent 15%,rgba(255,255,255,.5),transparent 45%);background:linear-gradient(120deg,transparent 15%,rgba(255,255,255,.5),transparent 45%)}
+40%{background:-webkit-linear-gradient(330deg,transparent 25%,rgba(255,255,255,.5),transparent 55%);background:-moz- oldlinear-gradient(330deg,transparent 25%,rgba(255,255,255,.5),transparent 55%);background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.5),transparent 55%)}
+50%{background:-webkit-linear-gradient(330deg,transparent 35%,rgba(255,255,255,.5),transparent 65%);background:-moz- oldlinear-gradient(330deg,transparent 35%,rgba(255,255,255,.5),transparent 65%);background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.5),transparent 65%)}
+60%{background:-webkit-linear-gradient(330deg,transparent 45%,rgba(255,255,255,.5),transparent 75%);background:-moz- oldlinear-gradient(330deg,transparent 45%,rgba(255,255,255,.5),transparent 75%);background:linear-gradient(120deg,transparent 45%,rgba(255,255,255,.5),transparent 75%)}
+70%{background:-webkit-linear-gradient(330deg,transparent 55%,rgba(255,255,255,.5),transparent 85%);background:-moz- oldlinear-gradient(330deg,transparent 55%,rgba(255,255,255,.5),transparent 85%);background:linear-gradient(120deg,transparent 55%,rgba(255,255,255,.5),transparent 85%)}
+80%{background:-webkit-linear-gradient(330deg,transparent 65%,rgba(255,255,255,.5),transparent 95%);background:-moz- oldlinear-gradient(330deg,transparent 65%,rgba(255,255,255,.5),transparent 95%);background:linear-gradient(120deg,transparent 65%,rgba(255,255,255,.5),transparent 95%)}
+90%{background:-webkit-linear-gradient(330deg,transparent 75%,rgba(255,255,255,.5),transparent 105%);background:-moz- oldlinear-gradient(330deg,transparent 75%,rgba(255,255,255,.5),transparent 105%);background:linear-gradient(120deg,transparent 75%,rgba(255,255,255,.5),transparent 105%)}
+100%{background:-webkit-linear-gradient(330deg,transparent 85%,rgba(255,255,255,.5),transparent 115%);background:-moz- oldlinear-gradient(330deg,transparent 85%,rgba(255,255,255,.5),transparent 115%);background:linear-gradient(120deg,transparent 85%,rgba(255,255,255,.5),transparent 115%)}
 }
 @-webkit-keyframes logoShow{
 from,to{-webkit-transform:scale(1,1);transform:scale(1,1)}
@@ -534,8 +534,8 @@ to{width:0}
 .active .am-delay-12{-webkit-animation-delay:1.2s;-moz-animation-delay:1.2s;animation-delay:1.2s}
 }
 .bubbly-button:after,.bubbly-button:before{position:absolute;content:"";display:block;width:140%;height:100%;left:-20%;-webkit-transition:all ease-in-out .5s;-moz-transition:all ease-in-out .5s;transition:all ease-in-out .5s;background-repeat:no-repeat}
-.bubbly-button:before{display:none;top:-75%;background-image:-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,transparent 20%,#0079c3 20%,transparent 30%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%);background-image:-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,transparent 20%,#0079c3 20%,transparent 30%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%);background-image:radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,transparent 20%,#0079c3 20%,transparent 30%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%);background-size:10% 10%,20% 20%,15% 15%,20% 20%,18% 18%,10% 10%,15% 15%,10% 10%,18% 18%}
-.bubbly-button:after{display:none;bottom:-75%;background-image:-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%);background-image:-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%),-moz-radial-gradient(circle,#0079c3 20%,transparent 20%);background-image:radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%);background-size:15% 15%,20% 20%,18% 18%,20% 20%,15% 15%,10% 10%,20% 20%}
+.bubbly-button:before{display:none;top:-75%;background-image:-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,transparent 20%,#0079c3 20%,transparent 30%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%);background-image:-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,transparent 20%,#0079c3 20%,transparent 30%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%);background-image:radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,transparent 20%,#0079c3 20%,transparent 30%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%);background-size:10% 10%,20% 20%,15% 15%,20% 20%,18% 18%,10% 10%,15% 15%,10% 10%,18% 18%}
+.bubbly-button:after{display:none;bottom:-75%;background-image:-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%),-webkit-radial-gradient(circle,#0079c3 20%,transparent 20%);background-image:-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%),-moz- oldradial-gradient(circle,#0079c3 20%,transparent 20%);background-image:radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,transparent 10%,#0079c3 15%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%),radial-gradient(circle,#0079c3 20%,transparent 20%);background-size:15% 15%,20% 20%,18% 18%,20% 20%,15% 15%,10% 10%,20% 20%}
 @-webkit-keyframes topBubbles{
 0%{background-position:5% 90%,10% 90%,10% 90%,15% 90%,25% 90%,25% 90%,40% 90%,55% 90%,70% 90%}
 50%{background-position:0 80%,0 20%,10% 40%,20% 0,30% 30%,22% 50%,50% 50%,65% 20%,90% 30%}
@@ -737,7 +737,7 @@ a.pswp__share--download:hover{background:#ddd}
 .h-lang>p{padding:32px 35px}
 .h-lang>p:before{content:"";position:absolute;bottom:0;left:0;width:0;height:1px;background:#308ed5;-webkit-transition:.3s;-moz-transition:.3s;transition:.3s;z-index:29}
 .h-lang .icon{display:inline-block;vertical-align:bottom;margin-left:10px;font-size:12px;font-weight:700;-webkit-transition:.3s;-moz-transition:.3s;transition:.3s}
-.h-lang .b{position:absolute;z-index:-1;left:-1px;right:0;top:100%;margin-top:-1px;border:1px solid #e5e5e5;padding:10px 0;text-align:center;-webkit-transform:translateY(-100%);-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);transform:translateY(-100%);opacity:0;visibility:hidden;-webkit-transition:.3s;-moz-transition:.3s;transition:.3s}
+.h-lang .b{position:absolute;z-index:-1;left:-1px;right:0;top:100%;margin-top:-1px;background:#fff;border:1px solid #e5e5e5;padding:10px 0;text-align:center;-webkit-transform:translateY(-100%);-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);transform:translateY(-100%);opacity:0;visibility:hidden;-webkit-transition:.3s;-moz-transition:.3s;transition:.3s}
 .h-lang a{display:block}
 .h-lang a:hover{color:#308ed5}
 .h-lang:hover .b{-webkit-transform:none;-moz-transform:none;-ms-transform:none;transform:none;opacity:1;visibility:visible}
@@ -813,7 +813,7 @@ a.pswp__share--download:hover{background:#ddd}
 .charac-list i,.charac-list p{position:relative}
 @media screen and (min-width:1025px){
 .charac-list li:hover:before{-webkit-transform:none;-moz-transform:none;-ms-transform:none;transform:none;opacity:1;visibility:visible}
-.charac-list li:hover{color:#fff}
+.charac-list li:hover p{color:#fff}
 .charac-list li:hover .ico{background-position:center bottom}
 }
 .ab-video{position:relative;padding-bottom:38.25503%;overflow:hidden}
@@ -883,7 +883,7 @@ a.pswp__share--download:hover{background:#ddd}
 .ix-news.item1 a{height:730px}
 .ix-news.item-bg1 a{background:#0d4e98;color:#fff}
 .ix-news .ti1{margin-bottom:6px;opacity:.6}
-.ix-news .ti2{margin-bottom:60px;max-height:60px;font-size:24px;line-height:30px!important}
+.ix-news .ti2{margin-bottom:60px;max-height:60px;font-size:24px;line-height:30px!important;overflow:hidden}
 .ix-news .num{position:absolute;left:40px;bottom:20px;line-height:1}
 .ix-news .btn-box{position:absolute;right:40px;bottom:20px}
 .ix-news.item2 a{background:#fff;height:365px}
@@ -953,6 +953,15 @@ a.pswp__share--download:hover{background:#ddd}
 .ix-cul-list .ma:after{content:"";position:absolute;top:0;bottom:0;left:0;right:0;background:url(../images/shadow.png) repeat-x left bottom}
 .ix-cul-list .pai{padding-bottom:64.28571%}
 .ix-cul-list .nowti{font-size:18px;position:absolute;left:0;right:0;padding:0 40px;z-index:9;bottom:40px}
+.ab3 .freeTx{text-align:center}
+.ab-pw{width:1300px;margin:0 auto}
+.cul-list li{background:#f7fcff}
+.cul-list li+li{margin-top:15px}
+.cul-list li .pic{width:50%;float:left}
+.cul-list li .txts{width:50%;float:left;padding:0 45px 0 45px;-moz-box-sizing:border-box;box-sizing:border-box}
+.cul-list li .en{position:relative;padding-left:40px;color:#a0b2cf;text-transform:uppercase;font-size:30px;font-weight:700}
+.cul-list li .en:before{content:"";position:absolute;left:0;top:50%;margin-top:-3px;width:24px;height:5px;background:#0d4e98}
+.cul-list li .ch{font-size:26px;color:#333}
 @media screen and (max-width:1600px){
 .header .nav{padding-left:5%}
 .h-lang>p{padding-left:30px;padding-right:30px}
@@ -1004,6 +1013,8 @@ a.pswp__share--download:hover{background:#ddd}
 .header .menu-btn{display:block}
 .footer .f-nav{display:none}
 #top{display:block}
+.ab1 .freeTx{width:auto;max-width:none}
+.ab1 .charac-list{margin-left:40px}
 }
 @media screen and (max-width:861px){
 .pbanner .pic2{height:43vw}
@@ -1012,6 +1023,12 @@ a.pswp__share--download:hover{background:#ddd}
 .footer .f-cta{float:none;overflow:hidden;width:auto;margin:0}
 .footer .logo{margin-right:35px}
 .footer .c{padding-top:25px}
+.ab1 .charac-list{margin:0 0 30px 0;float:none}
+.charac-list{text-align:center;letter-spacing:-6px}
+.charac-list li{display:inline-block;vertical-align:bottom;letter-spacing:0;margin:0 15px 20px 15px}
+.ab-ti{font-size:28px}
+.ab1 .ab-ti{margin-bottom:25px}
+.charac-list li+li{margin-top:0}
 }
 @media screen and (max-width:641px){
 .header,.mtop{height:60px}
@@ -1026,6 +1043,12 @@ a.pswp__share--download:hover{background:#ddd}
 }
 @media screen and (max-width:601px){
 .pbanner .pic2{height:55vw}
+.page-pa{padding:12vw 0 15vw 0}
+.ab1 .charac-list{margin-bottom:5vw}
+.charac-list li{margin:0 2.5vw 3.33vw 2.5vw}
+.ab-ti{font-size:24px}
+.ab1 .ab-ti{margin-bottom:4.17vw}
+.ab1 .ab-video{margin-top:10vw}
 }
 @media screen and (max-width:481px){
 .menu-btn{width:59px}
@@ -1038,4 +1061,11 @@ a.pswp__share--download:hover{background:#ddd}
 .f-share{line-height:36px}
 .footer .logo{float:none;margin:0;-webkit-transform-origin:left top;-moz-transform-origin:left top;-ms-transform-origin:left top;transform-origin:left top;-webkit-transform:scale(.85);-moz-transform:scale(.85);-ms-transform:scale(.85);transform:scale(.85)}
 .footer .t{padding:15px 0}
+.ab-ti{font-size:22px}
+.charac-list li{width:74px;height:74px;padding-top:10px}
+.charac-list .ico{-webkit-transform-origin:center top;-moz-transform-origin:center top;-ms-transform-origin:center top;transform-origin:center top;-webkit-transform:scale(.8);-moz-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8)}
+.charac-list p{margin-top:-8px}
+.video-btn{width:50px;height:50px;margin:-25px 0 0 -25px}
+.video-btn:after{border-width:2px}
+.video-btn .sj{margin:18px 0 0 19px;border-top-width:7px;border-bottom-width:7px}
 }

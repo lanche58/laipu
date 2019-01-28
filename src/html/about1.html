@@ -14,10 +14,10 @@
 <div class="container">
     <div class="ab1 pw page-pa">
         <div class="clearfix">
-            <ul class="charac-list">
-                <li><i class="ico" style="background-image: url(img/ab_ico1.png);"></i><p>研发</p></li>
-                <li><i class="ico" style="background-image: url(img/ab_ico2.png);"></i><p>生产</p></li>
-                <li><i class="ico" style="background-image: url(img/ab_ico3.png);"></i><p>贸易</p></li>
+            <ul class="charac-list scroll-animation">
+                <li class="trans transYF"><i class="ico" style="background-image: url(img/ab_ico1.png);"></i><p>研发</p></li>
+                <li class="trans transYF"><i class="ico" style="background-image: url(img/ab_ico2.png);"></i><p>生产</p></li>
+                <li class="trans transYF"><i class="ico" style="background-image: url(img/ab_ico3.png);"></i><p>贸易</p></li>
             </ul>
             <div class="freeTx">
                 <h1 class="ab-ti">成都铼谱科技有限公司</h1>
@@ -28,7 +28,7 @@
                 <p>成都铼谱科技研发的产品涵盖实验室分析型、半制备型、制备型液相色谱系统、中试放大型制备液相色谱系统，为客户提供以制备液相系统为核心的分离纯化集成解决方案。</p>
             </div>
         </div>
-        <div class="ab-video"><a id="playing" data-video-image="img/ab_i1.jpg" data-video-url="img/video.mp4">
+        <div class="ab-video scapic"><a id="playing" data-video-image="img/ab_i1.jpg" data-video-url="img/video.mp4">
             <div class="pic"><img src="img/ab_i1.jpg" alt=""></div>
             <span class="video-btn"><i class="sj sj-r"></i></span>
         </a></div>
@@ -52,12 +52,29 @@
         $('#playing').bind(_click, function() {
             var img = $(this).attr('data-video-image');
             var url = $(this).attr('data-video-url');
-            Video.load({
-                vcontainer: 'playing',
-                vfimg: img,
-                vfiles: url,
-                isautoplay: 'true'
-            });
+            if (!isMobile) {
+                Video.load({
+                    vcontainer: 'playing',
+                    vfimg: img,
+                    vfiles: url,
+                    isautoplay: 'true'
+                });
+            } else {
+                Video.load({
+                    vcontainer: 'videobox',
+                    vfimg: img,
+                    vfiles: url,
+                    isautoplay: 'true'
+                });
+                $('.vwrap').fadeIn();
+            }
+        });
+
+        $('.charac-list li').each(function(i, e) {
+            $(this).css({
+                'transition-delay': 200*($('.charac-list li').length - 1 - i) + 'ms',
+                '-webkit-transition-delay': 200*($('.charac-list li').length - 1 - i) + 'ms'
+            })
         });
     })
 </script>

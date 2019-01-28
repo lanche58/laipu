@@ -51,6 +51,8 @@
     .header .menu-btn{ display: block; }
     .footer .f-nav{ display: none; }
     #top{ display: block; }
+    .ab1 .freeTx{ width: auto; max-width: none; }
+    .ab1 .charac-list{ margin-left: 40px; }
 } /* 1024 */
 @media screen and (max-width:861px) {
     .pbanner .pic2{ height: 43vw; }
@@ -59,6 +61,12 @@
     .footer .f-cta{ float: none; overflow: hidden; width: auto; margin: 0; }
     .footer .logo{ margin-right: 35px; }
     .footer .c{ padding-top: 25px; }
+    .ab1 .charac-list{ margin: 0 0 30px 0; float: none; }
+    .charac-list{ text-align: center; letter-spacing: -6px; }
+    .charac-list li{ display: inline-block; vertical-align: bottom; letter-spacing: 0; margin: 0 15px 20px 15px; }
+    .ab-ti{ font-size: 28px; }
+    .ab1 .ab-ti{ margin-bottom: 25px; }
+    .charac-list li+li{ margin-top: 0; }
 } /* 861 */
 @media screen and (max-width:641px) {
     .mtop, .header{ height: 60px; }
@@ -73,6 +81,13 @@
 } /* 641 */
 @media screen and (max-width:601px) {
     .pbanner .pic2{ height: 55vw; }
+    .page-pa{ padding: 12vw 0 15vw 0; }
+    .ab1 .charac-list{ margin-bottom: 5vw; }
+    .charac-list li{ margin: 0 2.5vw 3.33vw 2.5vw; }
+    .ab-ti{ font-size: 24px; }
+    .ab1 .ab-ti{ margin-bottom: 4.17vw; }
+    .ab1 .ab-video{ margin-top: 10vw; }
+    
 } /* 601 */
 @media screen and (max-width:481px) {
     .menu-btn{ width: 59px; }
@@ -85,6 +100,13 @@
     .f-share{ line-height: 36px; }
     .footer .logo{ float: none; margin: 0; transform-origin: left top; transform: scale(.85); }
     .footer .t{ padding: 15px 0; }
+    .ab-ti{ font-size: 22px; }
+    .charac-list li{ width: 74px; height: 74px; padding-top: 10px; }
+    .charac-list .ico{ transform-origin: center top; transform: scale(.8); }
+    .charac-list p{ margin-top: -8px; }
+    .video-btn{ width: 50px; height: 50px; margin: -25px 0 0 -25px; }
+    .video-btn:after{ border-width: 2px; }
+    .video-btn .sj{ margin: 18px 0 0 19px; border-top-width: 7px; border-bottom-width: 7px; }
 } /* 481 */
 @media screen and (max-width:361px) {} /* 361 */
 @media screen and (max-width:321px) {} /* 341 */
