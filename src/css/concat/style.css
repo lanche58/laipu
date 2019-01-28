@@ -954,3 +954,30 @@
   .cul-list li .ch {
     font-size: 26px;
     color: #333; }
+
+.slick-arrow {
+  font-family: "iconfont" !important;
+  text-align: center; }
+
+.slick-prev:before {
+  content: "\e660"; }
+
+.slick-next:before {
+  content: "\e65f"; }
+
+.ix-arrow .slick-arrow {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: url(../images/white1.png);
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 24px;
+  color: #fff;
+  line-height: 60px; }
+
+.ix-arrow .slick-prev {
+  left: 10px; }
+
+.ix-arrow .slick-next {
+  right: auto;
+  left: 100%; }
