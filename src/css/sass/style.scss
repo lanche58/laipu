@@ -364,8 +364,8 @@
     padding-top: 55px; position: relative;
     &:before{ @include ba; top: 99px; left: 0; right: 0; height: 1px; background: $hc2; }
 }
-.ix5{
-    border-top: 1px solid $hc2; padding: 0 0 100px 0;
+.ix5{ border-top: 1px solid $hc2; padding: 60px 0 100px 0; 
+    .ix-cul-t{ margin-bottom: 35px; }
 }
 .ix-cul-list{
     overflow: visible;
@@ -376,7 +376,11 @@
         &:after{ @include ba; @include tblr; background: url(../images/shadow.png) repeat-x left bottom; }
     }
     .pai{ padding-bottom: (720 / 1120) * 100%; }
-    .nowti{ font-size: 18px; @include plr; padding: 0 40px; z-index: 9; bottom: 40px; }
+    .nowti{ font-size: 18px; @include plr; padding: 0 40px; z-index: 9; bottom: 40px; @include mt3; }
+}
+@media screen and (min-width:1025px) {
+    .ix-cul-list .slick-current:hover .pai img{ transform: scale(1.1); }
+    .ix-cul-list .slick-current:hover .nowti{ color: $mc2; }
 }
 .ab3 .freeTx{ text-align: center; }
 .ab-pw{ width: 1280px; margin: 0 auto; }
@@ -608,4 +612,154 @@
 @media screen and (min-width:1025px) {
     .pro-hot-list .item a:hover{ transform: translateY(-10px); }
     .pro-hot-list .slick-arrow:hover{ background: #000; color: #fff; } 
+}
+.case-pw{ width: 1200px; margin: 0 auto; }
+.case-ti{ line-height: 1.4; color: $fc1; font-size: 36px; }
+.flow-list{
+    padding: 0 80px; margin-left: -40px;
+    li{ float: left; width: 25%; margin-bottom: 40px; }
+    .ma{ position: relative; z-index: 9; background: $mc1; padding: 0 30px; height: 110px; border-radius: 10px; color: #fff; margin-left: 40px; line-height: 1.4; 
+        &:before{ @include hl($mc4,100%); z-index: -1; border-radius: 10px; }
+    }
+    .icon{ display: block; position: absolute; width: 40px; color: $hc1; font-size: 14px; line-height: 40px; text-align: center; }
+    .icon-arrowright{ top: 50%; left: 100%; margin-top: -20px; }
+    .icon-arrowdown{ top: 100%; left: 50%; margin-left: -20px; }
+    .r{ float: right; }
+    .icon-arrowleft{ right: 100%; top: 50%; margin-top: -20px; }
+}
+@media screen and (min-width:1025px) {
+    .flow-list .ma:hover:before{ @include hlw; }
+}
+.field-list{
+    border-top: 1px solid $hc1;
+    .t{ position: relative; border-bottom: 1px solid $hc1; padding: 50px 50px 50px 0; cursor: pointer; }
+    .line{ @include hl($mc1,1px); content: none; bottom: -1px; }
+    .nowti{ font-size: 20px; line-height: 24px; color: $fc1; }
+    .case-add{ float: right; margin-left: 30px; }
+    .b{ padding: 50px 50px 90px 50px; background: $mc3; display: none; }
+    li.act{
+        .line{ @include hlw; }
+        .case-add{ background: $mc1; 
+            &:after{ transform: rotate(180deg); }
+        }
+    }
+    li:hover{
+        .line{ @include hlw; }
+        .case-add{ background: $mc1; }
+    }
+}
+.case-add{
+    position: relative; @include c(24px); background: $fc2; @include mt3;
+    &:before, &:after{ @include ba; top: 50%; left: 50%; background: #fff; @include mt3; }
+    &:before{ margin: -1px 0 0 -5px; width: 10px; height: 2px; }
+    &:after{ height: 10px; width: 2px; margin: -5px 0 0 -1px; }
+}
+.case1{
+    .flow-list{ margin-bottom: 40px; }
+    .case-ti{ margin-bottom: 50px; }
+}
+.ser-ti{ line-height: 1.4; font-size: 24px; color: $fc1; }
+.ser1{
+    padding-bottom: 70px;
+    .ser-ti{ margin-bottom: 6px; }
+}
+.ser-list{ padding: 0 (155 / 1920) * 100%; border-top: 1px solid $hc1;
+    li{ width: 25%; float: left; padding: 55px 25px 0 25px; @include bs; border-right: 1px solid $hc1; @include mt3;
+        &:first-child{ border-left: 1px solid $hc1; }
+    }
+    .ico{ display: block; margin-bottom: 17px; height: 50px; background-position: left center; }
+    .nowti{ margin-bottom: 18px; font-size: 18px; color: $fc1; }
+    .tx{ line-height: 20px !important; height: 160px; margin-bottom: 40px; }
+    .pic{
+        margin-right: -25px;
+        img{ float: right; width: 72.8%; }
+    }
+}
+@media screen and (min-width:1025px) {
+    .ser-list li:hover{ background: $mc3; } 
+}
+.down-list{
+    border-top: 1px solid $hc1;
+    a{ display: block; padding: 47px 0; line-height: 30px; overflow: hidden; border-bottom: 1px solid $hc1; color: $fc1; }
+    .nowti{ line-height: 30px; font-size: 20px; }
+    .icon{ float: right; margin-left: 30px; font-size: 28px; }
+}
+@media screen and (min-width:1025px) {
+    .down-list a:hover{ color: $mc1; }
+}
+.cta1{ border-bottom: 1px solid $hc1; }
+.cta-tx{
+    width: 34%; float: right; padding: 70px 65px 0 65px; @include bs; 
+    .cta-list{ margin-top: 27px; }
+    .cta-tel{ margin-top: 37px; }
+    .f-ma{ margin-top: 85px; }
+    .btn-box{ margin-top: 35px; }
+}
+#map{ overflow: hidden; height: 675px; }
+.cta-list{
+    p{ overflow: hidden; line-height: 24px; 
+        + p{ margin-top: 16px; }
+    }
+    .icon{ @include di; width: 30px; color: $mc1; font-size: 20px; }
+}
+.cta-tel{
+    .icon{ float: left; margin-right: 20px; font-size: 54px; color: $mc1; line-height: 64px; }
+    .b{ overflow: hidden; font-size: 24px; line-height: 32px; }
+}
+.cta-qq{
+    width: 142px; background: $mc1; color: #fff; line-height: 48px; text-align: center;
+    .icon{ @include di; font-size: 20px; margin-right: 10px; }
+}
+@media screen and (min-width:1025px) {
+    .cta-qq:hover{ background: $mc2; }
+    .cta-list a:not(.na):hover{ color: $mc1; }
+}
+.online-message-form{
+    .s-input{ @include bs; padding: 11px 20px; width: 100%; height: 48px; border: 1px solid $hc3; background: $hc3; line-height: 24px; @include mt3; 
+        &:focus{ border-color: $mc1; background: #fff; }
+    }
+    .s-textarea{ height: 200px; margin-top: 25px; vertical-align: bottom; }
+    .clearfix{
+        .s-input{ width: 32%; float: left;
+            + .s-input{ margin-left: 2%; }
+        }
+    }
+    .subBtn{ width: 138px; height: 48px; margin-top: 25px; background: $mc1; color: #fff; @include mt3; }
+}
+@media screen and (min-width:1025px) {
+    .online-message-form .subBtn:hover{ background: $mc2; }
+}
+.cta2{
+    .online-message-form{ margin-top: 35px; }
+}
+.sos-box{
+    text-align: center; position: fixed; left: 0; right: 0; top: 50%; margin-top: -170px; padding: 0 10%; font-size: 12px;
+    img{ vertical-align: bottom; max-width: 90%; }
+    .ch{ margin-top: 30px; font-size: 30px; color: $fc1; }
+    .en{ margin-top: 10px; font-size: 22px; }
+    .tx1{  margin-top: 60px;}
+    .ib{ color: $fc3; text-decoration: underline; 
+        + .ib{ margin-left: 30px; }
+    }
+    .fib{ margin-top: 10px; }
+}
+@media screen and (min-width:1025px) {
+    .sos-box .ib:hover{ color: $mc1; }
+}
+.cul-next{ position: absolute; z-index: 199; right: 10px; top: 50%; margin-top: -30px; @include c(60px); background: url(../images/white1.png); background: rgba(255,255,255,.4); font-size: 24px; color: #fff; font-family: iconfont!important; text-align: center; line-height: 60px; cursor: pointer; @include mt3; }
+.ix-cul{ position: relative; }
+@media screen and (min-width:1025px) {
+    .ix-arrow .slick-arrow:hover,
+    .cul-next:hover{ background: #fff; color: $mc2; }
+}
+.ix-cul-t{
+    line-height: 24px; padding-left: 20px;
+    .ti{ float: left; margin-right: 30px; line-height: 24px; color: $mc2; }
+    .cul-nums{ float: left; font-size: 12px; }
+}
+.cul-nums{
+    > span{ float: left; }
+    .line{ position: relative; width: 70px; height: 1px; margin: 12px 15px 0 15px; background: $hc1; 
+        i{ display: block; position: absolute; left: 0; top: 0; width: 0; height: 100%; background: $mc1; }
+    }
 }

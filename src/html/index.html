@@ -100,8 +100,17 @@
     </div>
     <!-- ix4 -->
     <div class="ix5">
-        <div class="pw">
-            <div class="ix-cul">
+        <div class="pw ix-cul-t clearfix">
+            <h3 class="ti">企业风采</h3>
+            <p class="cul-nums">
+                <span class="cnum">01</span>
+                <span class="line"><i></i></span>
+                <span class="anum">01</span>
+            </p>
+        </div>
+        <!-- ix-cul-t -->
+        <div class="ix-cul">
+            <div class="pw">
                 <div class="ix-cul-list ix-arrow u-slick">
                     <div class="item">
                         <div class="ma">
@@ -128,9 +137,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- ix-cul-list -->
             </div>
+            <div class="cul-next icon iconfont icon-xiangyoujiantou"></div>
         </div>
+        <!-- ix-cul -->
     </div>
     <!-- ix5 -->
 </div>
@@ -145,13 +155,24 @@
 </div>
 <script src="js/video/player.mini.js"></script>
 <script src="js/page.js"></script>
-<script src="js/index.js"></script>
 <script>
     $(function(){
+        var maxnum = $('.ix-cul-list .item').length;
+        maxnum = maxnum > 9 ? maxnum : '0' + maxnum;
+        $('.cul-nums .anum').html(maxnum);
+        var minw = 70/maxnum;
+        var $line = $('.cul-nums .line>i');
+        $line.stop().animate({width: minw},300,'linear');
         $('.ix-cul-list').slick({
             slidesToShow: 2,
             slidesToScroll: 1,
-            variableWidth: true
+            variableWidth: true,
+            nextArrow: '.cul-next'
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            var minnum = nextSlide + 1;
+            minnum = minnum > 9 ? minnum : '0' + minnum;
+            $('.cul-nums .cnum').html(minnum);
+            $line.stop().animate({width: minnum*minw},300,'linear');
         });
     })
 </script>
