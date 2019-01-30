@@ -12,7 +12,78 @@
             </div>
         </div>
         <!-- nd-t -->
-        <div class="nd-b">
+        <div class="nd-b pd-b clearfix">
+            <div class="pro-nav">
+                <ul>
+                    <li><a href="pro1.html">半制备/制备液相色谱系统</a>
+                        <div class="b">
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                        </div>
+                    </li>
+                    <li><a href="pro1.html">中试放大制备液相色谱系统</a>
+                        <div class="b">
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                        </div>
+                    </li>
+                    <li><a href="pro1.html">工业化制备液相色谱系统</a>
+                        <div class="b">
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                        </div>
+                    </li>
+                    <li><a href="pro1.html">制备色谱系统组件</a>
+                        <div class="b">
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                        </div>
+                    </li>
+                    <li><a href="pro1.html">样品制备及分离纯化解决方案服务</a>
+                        <div class="b">
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                        </div>
+                    </li>
+                    <li><a href="pro1.html">其他</a>
+                        <div class="b">
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                            <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- pro-nav -->
             <div class="freeTx">
                 <p style="text-align: center;"><img src="img/pro_i5.jpg" alt=""></p>
                 <br>
@@ -54,6 +125,27 @@
         $('.pro-hot-list').slick({
             slidesToShow: 2,
             slidesToScroll: 2
+        });
+
+        $('.pro-nav li > a').bind(_click, function(e) {
+            var $next = $(this).next(),
+                nextlen = $next.size();
+            var $sib = $(this).parent().siblings();
+            var _act = $(this).hasClass('act');
+            if (nextlen && !_act) {
+                e.preventDefault();
+                $sib.find('.b').stop().slideUp();
+                $next.stop().slideDown();
+                $sib.children('a').removeClass('act');
+                $(this).addClass('act');
+            }
+        });
+
+        $(window).scroll(function() {
+            if (isMobile) { return; }
+            var st = $(window).scrollTop(),
+                pt = $('.nd-b').offset().top - $mtoph;
+            st > pt ? $('.pro-nav').addClass('fix') : $('.pro-nav').removeClass('fix');
         });
     })
 </script>

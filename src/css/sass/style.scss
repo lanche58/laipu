@@ -11,7 +11,7 @@
     .c{ position: relative; margin: 0 34% 0 240px; height: 100%; }
     .bodr{ display: block; position: absolute; z-index: 19; left: 0; right: 0; bottom: 0; height: 1px; background: $hc2; }
     .nav{
-        padding-left: 6%; float: left; background: #fff;
+        padding-left: 6%; float: left; width: 611px; background: #fff;
         li{ position: relative; padding: 0 (34px - 12px) /2; float: left; 
             > a{ display: block; position: relative; padding: (88px - 24px) /2 6px; color: $fc1; 
                 &:before{ @include line-lr(1px,$mc2); z-index: 29; }
@@ -114,6 +114,8 @@
 .pbanner{
     .txts{ position: absolute; top: 0; bottom: 0; left: 5%; right: 5%; color: #fff; }
     .ch{ font-size: 30px; }
+    .txts2{ @include plr; top: 0; padding-top: (130 / 1920) * 100%; }
+    .ix-ab-ti{ float: right; color: #fff; }
 }
 @keyframes fadeIn{
     0%{ opacity: 0; }
@@ -235,7 +237,7 @@
     &:before{ @include hl($mc4, 100%); }
     a{ display: block; position: relative; padding: 130px 50px 0 50px; @include bs; color: #fff; }
     .nowti{ margin-bottom: 10px; font-size: 24px; }
-    .tx{ width: 420px; max-width: 100%; }
+    .tx{ width: 420px; height: 48px; max-width: 100%; }
     .ix-more{ margin-top: 50px; }
 }
 .btn-box{
@@ -308,10 +310,10 @@
 }
 .ix-news-list{
     position: relative; padding: 70px 40px 0 40px; height: 365px; @include bs; background: $fc1; color: #fff;
-    a{ overflow: hidden; line-height: 30px; color: #fff; }
     .b{
         margin-bottom: 80px;
         .nowti{ line-height: 30px; }
+        a{ overflow: hidden; line-height: 30px; color: #fff; }
     }
     .date{ float: right; margin-left: 30px; }
     > .nowti{ margin-bottom: 10px; }
@@ -326,6 +328,7 @@
     .ip-ti{ padding: 0 17% 0 14%; }
     .ip-ti{ margin-bottom: 50px; }
     .ix-pro-list{ margin-bottom: 40px; }
+    
 }
 .ip-ti{ line-height: 1.4; font-size: 50px; color: $fc1; }
 .ix-pro-list{
@@ -342,7 +345,9 @@
     .ix-pro-list a:hover .nowti,
     .ix-pro-list a:hover{ color: $mc2; }
 }
-.ix-pro-bg{ width: 33.33%; height: 868px; @include bg; float: left; }
+.ix-pro-bg{ width: 33.33%; height: 868px; float: left; overflow: hidden;
+    .animateme{ position: relative; left: -100%; height: 100%; width: 200%; @include bg; }
+}
 .ix-ser-list{
     li{ width: 50%; float: left; 
         + li .b{ border-left: 1px solid $mc6; }
@@ -351,7 +356,7 @@
     .b{ position: relative; height: 345px; padding: 55px 40px 0 40px; @include bs; background: $mc1; color: #fff; 
         &:before{ @include hl($mc4, 100%); }
     }
-    .tx{ position: relative; width: 576px; max-height: 60px; max-width: 100%; font-size: 24px; line-height: 30px !important; }
+    .tx{ position: relative; width: 576px; height: 60px; max-width: 100%; font-size: 24px; line-height: 30px !important; }
     .ix-more{ position: relative; margin-top: 150px; }
     .icon{ position: absolute; bottom: 55px; right: 40px; color: $mc5; line-height: 1; font-size: 56px; }
 }
@@ -366,21 +371,23 @@
 }
 .ix5{ border-top: 1px solid $hc2; padding: 60px 0 100px 0; 
     .ix-cul-t{ margin-bottom: 35px; }
+    .btn-box{ margin-top: 45px; }
 }
 .ix-cul-list{
     overflow: visible;
     &:after{ @include ba; z-index: 299; right: 50%; margin-right: 745px; top: 0; bottom: 0; width: 500px; background: #fff; }
     .slick-list{ overflow: visible; }
     .item{ width: 1120px; }
-    .ma{ margin-right: 5px; position: relative; color: #fff;
+    .ma{ margin-right: 5px; display: block; position: relative; color: #fff; cursor: default;
         &:after{ @include ba; @include tblr; background: url(../images/shadow.png) repeat-x left bottom; }
     }
+    .slick-current .ma{ cursor: pointer; }
     .pai{ padding-bottom: (720 / 1120) * 100%; }
     .nowti{ font-size: 18px; @include plr; padding: 0 40px; z-index: 9; bottom: 40px; @include mt3; }
 }
 @media screen and (min-width:1025px) {
     .ix-cul-list .slick-current:hover .pai img{ transform: scale(1.1); }
-    .ix-cul-list .slick-current:hover .nowti{ color: $mc2; }
+    // .ix-cul-list .slick-current:hover .nowti{ color: $mc2; }
 }
 .ab3 .freeTx{ text-align: center; }
 .ab-pw{ width: 1280px; margin: 0 auto; }
@@ -412,7 +419,7 @@
 .ix-arrow{
     .slick-arrow{ width: 60px; height: 60px; border-radius: 100%; background: url(../images/white1.png); background: rgba(255,255,255,.4); font-size: 24px; color: #fff; line-height: 60px; }
     .slick-prev{ left: 10px; }
-    .slick-next{ right: auto; left: 100%; }
+    .slick-next{ right: 10px; }
 }
 .ab-pw2{ width: 1100px; margin: 0 auto; }
 .honor-list{
@@ -483,8 +490,8 @@
     .ix-date{ margin-top: 5px; color: $mc1; }
 }
 .nd-b{
-    padding: 70px 0 170px 0;
-    .freeTx{ width: 910px; max-width: 90%; margin: 0 auto; }
+    padding-bottom: 170px;
+    .freeTx{ width: 910px; max-width: 90%; margin: 0 auto; padding-top: 70px; }
 }
 .nd-back{
     border-top: 1px solid #ccc;
@@ -762,4 +769,60 @@
     .line{ position: relative; width: 70px; height: 1px; margin: 12px 15px 0 15px; background: $hc1; 
         i{ display: block; position: absolute; left: 0; top: 0; width: 0; height: 100%; background: $mc1; }
     }
+}
+.pro-nav{
+    float: left; width: 240px; 
+    ul{ padding: 30px 0; background: $mc1; }
+    a{ display: block; line-height: 1.4; color: #fff; }
+    li{ padding: 0 15px; 
+        > a{ padding: 6px 0; }
+    }
+    .b{
+        padding: 15px 0 15px 25px; display: none;
+        a{ font-size: 12px; padding: 10px 0; color: $mc9; }
+    }
+    &.fix{ position: fixed; top: 88px; left: 0; z-index: 599; max-height: 100%; padding-bottom: 88px; @include bs; @include sy; 
+        ul{ border-top: 1px solid #fff; }
+    }
+    &::-webkit-scrollbar { width: 6px; background: $hc1; }
+    &::-webkit-scrollbar-thumb { background: $mc2; }
+}
+@media screen and (min-width:1025px) {
+    .pro-nav .b a:hover{ color: #fff; text-decoration: underline; }
+    .pro-nav li > a:hover{ color: $mc2; }
+}
+.pd-b .freeTx{ overflow: visible; }
+.ab-intro{
+    width: 750px; max-width: 90%; margin: 0 auto; text-align: center;
+    .freeTx{ margin-top: 35px; text-align: center; }
+    .btn-box{ margin-top: 85px; }
+}
+.ai-more{
+    position: relative; line-height: 1.8; color: $mc1;
+    &:before{ @include hl($mc1, 1px); }
+}
+@media screen and (min-width:1025px) {
+    .ai-more:hover:before{ @include hlw; }
+}
+.ab-link-list{
+    li{ width: 50%; float: left; }
+    .pai{ padding-bottom: (466 / 960) * 100%; 
+        &:before, &:after{  z-index: 1;  }
+        &:before{ @include tblr; @include ba; background: url(../images/blue.png); }
+        &:after{ @include hl($mc1,100%); }
+    }
+    a{ display: block; position: relative; color: #fff; }
+    .tx, .ti{ z-index: 9; @include plr; padding: 0 (93 / 960) * 100%; }
+    .tx{ padding-top: (65 / 960) * 100%; top: 0; height: 70px; font-size: 24px; line-height: 35px !important; }
+    .ti{ bottom: 0; padding-bottom: (50 / 960) * 100%; }
+    .btn-box{ position: absolute; z-index: 9; bottom: 0; right: 0; padding: 0 (93 / 960) * 100% (50 / 960) * 100% 0; transform: translateY(20px); @include hide; @include mt4;  }
+    .in-more{ padding: 35px 0 0 0; }
+}
+@media screen and (min-width:1025px) {
+    .ab-link-list a:hover .pai img{ transform: scale(1.1); }
+    .ab-link-list a:hover .pai:after{ @include hlw; }
+    .ab-link-list a:hover .btn-box{ transform: none; @include show; }
+}
+.ab7{
+    .case-ti{ margin-bottom: 15px; }
 }
