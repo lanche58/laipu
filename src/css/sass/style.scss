@@ -647,10 +647,12 @@
     li.act{
         .line{ @include hlw; }
         .case-add{ background: $mc1; 
-            &:after{ transform: rotate(180deg); }
+            &:after{ transform: rotate(90deg); }
         }
     }
-    li:hover{
+}
+@media screen and (min-width:1025px) {
+    .field-list li:hover{
         .line{ @include hlw; }
         .case-add{ background: $mc1; }
     }
@@ -825,4 +827,9 @@
 }
 .ab7{
     .case-ti{ margin-bottom: 15px; }
+    .ab-honor{ margin-bottom: 60px; }
+    .freeTx{ margin-bottom: 50px; }
+}
+.ab-honor{ width: 1000px; margin: 0 auto; max-width: 100%; 
+    .dnSlide-main{ height: 472px !important; }
 }

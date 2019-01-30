@@ -1686,11 +1686,13 @@
   .field-list li.act .case-add {
     background: #0d4e98; }
     .field-list li.act .case-add:after {
-      transform: rotate(180deg); }
+      transform: rotate(90deg); }
+
+@media screen and (min-width: 1025px) {
   .field-list li:hover .line {
     width: 100%; }
   .field-list li:hover .case-add {
-    background: #0d4e98; }
+    background: #0d4e98; } }
 
 .case-add {
   position: relative;
@@ -2135,3 +2137,16 @@
 
 .ab7 .case-ti {
   margin-bottom: 15px; }
+
+.ab7 .ab-honor {
+  margin-bottom: 60px; }
+
+.ab7 .freeTx {
+  margin-bottom: 50px; }
+
+.ab-honor {
+  width: 1000px;
+  margin: 0 auto;
+  max-width: 100%; }
+  .ab-honor .dnSlide-main {
+    height: 472px !important; }

@@ -140,24 +140,24 @@
 
 <div class="container">
     <div class="ab5 page-pa">
-        <div class="ab-intro">
-            <h2 class="case-ti">成都铼谱科技有限公司</h2>
-            <div class="freeTx">
+        <div class="ab-intro scroll-animation">
+            <h2 class="case-ti trans transY">成都铼谱科技有限公司</h2>
+            <div class="freeTx trans transY dly-2">
                 <p>成都铼谱科技有限公司是集研发、生产、销售于一体，以液相色谱产品为核心的高新技术企业，公司产品融合国际最顶尖的液相色谱技术，并获得众多发明和实用新型专利；部分产品填补了国内相关行业的技术空白...</p>
             </div>
-            <div class="btn-box"><a href="about1.html" class="ai-more btn">Read more</a></div>
+            <div class="btn-box trans transY dly-4"><a href="about1.html" class="ai-more btn">Read more</a></div>
         </div>
     </div>
     
     <div class="ab6">
-        <ul class="ab-link-list clearfix">
-            <li><a href="about2.html">
+        <ul class="ab-link-list scroll-animation clearfix">
+            <li class="trans transY"><a href="about2.html">
                 <div class="pai"><img src="img/ab_i4.jpg" alt=""></div>
                 <h2 class="tx">客户满意是我们的第一目标 尊重和关心员工的个人利益</h2>
                 <h3 class="ti">企业文化</h3>
                 <div class="btn-box"><span class="in-more btn white"><img src="images/more2.png" alt=""><i class="btn-sjt"></i></span></div>
             </a></li>
-            <li><a href="about3.html">
+            <li class="trans transY"><a href="about3.html">
                 <div class="pai"><img src="img/ab_i5.jpg" alt=""></div>
                 <h2 class="tx">专业从事制备液相色谱系统研发、制造、销售于一体的国家高新技术企业</h2>
                 <h3 class="ti">组织架构</h3>
@@ -166,10 +166,21 @@
         </ul>
     </div>
     
-    <div class="ab7 pw page-pa tac">
-        <h2 class="case-ti">资质荣誉</h2>
-        <div class="freeTx tac">秉承专业精神，专注核心优势，追求卓越品质，精益求精，始终如一</div>
-        <div class="btn-box"><a href="about4.html" class="ai-more btn">Read more</a></div>
+    <div class="ab7 pw page-pa tac scroll-animation">
+        <h2 class="case-ti trans transY">资质荣誉</h2>
+        <div class="freeTx tac trans transY dly-1">秉承专业精神，专注核心优势，追求卓越品质，精益求精，始终如一</div>
+        <div class="ab-honor trans transY dly-2">
+            <div class="dnSlide-main">
+                <img src="img/ab_i333.jpg" width="100%">
+                <img src="img/ab_i333.jpg" width="100%">
+                <img src="img/ab_i333.jpg" width="100%">
+                <img src="img/ab_i333.jpg" width="100%">
+                <img src="img/ab_i333.jpg" width="100%">
+                <img src="img/ab_i333.jpg" width="100%">
+                <img src="img/ab_i333.jpg" width="100%">
+            </div>
+        </div>
+        <div class="btn-box trans transY dly-4"><a href="about4.html" class="ai-more btn">Read more</a></div>
     </div>
     
     <div class="ix5">
@@ -260,6 +271,8 @@
 <script src="js/plugin.js"></script>
 
 <script src="js/page.js"></script>
+<script src="js/dnSlide.js"></script>
+<script src="js/expandJS.js"></script>
 <script>
     $(function(){
         var maxnum = $('.ix-cul-list .item').length;
@@ -289,6 +302,20 @@
             $('.cul-nums .cnum').html(minnum);
             $line.stop().animate({width: minnum*minw},300,'linear');
         });
+        var setting = {
+            "response": true,
+            "precentWidth": "37%",
+            "verticalAlign": "middle",
+            "scale": 0.85
+        };
+        if (!isMobile) { $('.dnSlide-main').dnSlide(setting); }
+        $('.ab-link-list li').each(function(i, e) {
+           $(this).css({
+               'transition-delay': 200*i + 'ms',
+               '-webkit-transition-delay': 200*i + 'ms'
+           })
+       });
+        
     })
 </script>
 </body>
