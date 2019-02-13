@@ -124,7 +124,12 @@
     $(function(){
         $('.pro-hot-list').slick({
             slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToScroll: 2,
+            autoplay: true,
+            autoplaySpeed: 0,
+            speed: 10000,
+            cssEase: 'linear',
+            pauseOnHover: true
         });
 
         $('.pro-nav li > a').bind(_click, function(e) {

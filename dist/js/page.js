@@ -28,7 +28,6 @@ if (Modernizr.touch) {
 }; 
 
 function pageBox() {
-	
    	w_width = $(window).width();
     w_height = $(window).height();	
 	$mtoph = $('.mtop').height();
@@ -47,26 +46,6 @@ function pageBox() {
             }
         });
     }
-
-    // if(w_width <= 861){
-    //     var danNum=0;
-    //     $('.pnav ul').css('display','none');
-    //     $('.pnav').bind(_click,function(){
-    //         if(danNum==1){
-    //             $(this).removeClass('show');
-    //             $(this).find('ul').stop().fadeOut();
-    //             danNum = 0;
-    //         }else{
-    //             $(this).addClass('show');
-    //             $(this).find('ul').stop().fadeIn();
-    //             danNum = 1;
-    //         }
-    //     });
-    // }else{
-    //     $('.pnav').removeClass('show');
-    //     $('.pnav ul').css('display','block');
-    //     $('.pnav').unbind(_click);
-    // }
 };
 
 pageBox();
@@ -78,7 +57,7 @@ $(window).resize(function () {
 $(function () {
     $('.h-news').slick({
         arrows: false,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 0,
         speed: 10000,
         cssEase: 'linear',
@@ -90,33 +69,6 @@ $(function () {
             splitWords($(this));
         });
     }
-
-    
-	
-	
-
-
-    // 友情链接
-    // var isopen = 0;
-    // $('.friendship-link').bind(_click, function(){
-    //     if(isopen==0){
-    //         isopen = 1;
-    //         $(this).addClass('act');
-    //         $('.friendship-link .k').stop().slideDown(300);
-    //     }else{
-    //         isopen = 0;
-    //         $(this).removeClass('act');
-    //         $('.friendship-link .k').stop().slideUp(300);
-    //     }
-    // });
-    // $('.friendship-link').mouseleave(function(){
-    //     isopen = 0;
-    //     $('.friendship-link').removeClass('act');
-    //     $('.friendship-link .k').stop().slideUp(300);
-    // });
-
-
-
 
 	// 手机导航
 	$('.navMobile dd > a').bind(_click, function (e) {
@@ -149,7 +101,6 @@ $(function () {
         }
     });
  
-	
 	// pbanner animation
 	$(window).scroll(function() {
         var windowTop = $(window).scrollTop();

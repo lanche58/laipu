@@ -29,5 +29,5 @@ textarea {resize: vertical; overflow-y: auto }
 ::selection {background: #d76c00; color: #fff; text-shadow: none; }
 a:link, a:visited {text-decoration: none; }
 a:active, a:hover {text-decoration: none; }
-.clearfix:before, .clearfix:after {display: table; content: ""; line-height: 0px; }
+.clearfix:after {display: table; content: ""; line-height: 0px; }
 .clearfix:after {clear: both; }

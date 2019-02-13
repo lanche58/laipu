@@ -9,13 +9,13 @@
     "ch": "联系我们"
 })
 <div class="container">
-    <div class="cta1 clearfix">
+    <div class="cta1 clearfix" id="cta1">
         <div class="cta-tx">
             <h2 class="case-ti">成都铼谱科技有限公司</h2>
             <div class="cta-list">
                 <p><a href="#"><i class="icon iconfont icon-dizhi"></i>地址: 中国四川省成都市高新区科园南路88号天府生命科技园A2栋5楼</a></p>
                 <p><a href="#"><i class="icon iconfont icon-qq"></i>QQ：1262186355</a></p>
-                <p><a href="#"><i class="icon iconfont icon-youxiang1"></i>邮箱：1262186355@qq.com</a></p>
+                <p><a href="#"><i class="icon iconfont icon-youxiang1"></i>邮箱：dinghong@cdlaipu.com</a></p>
             </div>
             <div class="cta-tel clearfix">
                 <i class="icon iconfont icon-dainhau"></i>
@@ -32,7 +32,7 @@
         <div id="map"></div>
     </div>
     <!-- cta1 -->
-    <div class="cta2 pw page-pa">
+    <div class="cta2 pw page-pa" id="cta2">
         <h2 class="case-ti">在线留言</h2>
         <form>
             <div class="online-message-form">
@@ -77,6 +77,29 @@
         };
         var k='<p style="font-size: 18px; color: #666;">地址：四川省绵阳市游仙区游仙东路89号</p><p style="font-size: 18px; color: #666;">邮编：621000</p>'; 
         ShowMap('104.018887,30.723201', k, '17');
+
+        $('.pull-nav .cta-anchor').bind(_click, function(e) {
+            var hash = $(this).attr('href').split('#')[1];
+            console.log(hash);
+            if(hash){
+                e.preventDefault();
+                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 800);
+            }
+        });
+
+        $('.mtv .cta-anchor').bind(_click, function(e) {
+            var hash = $(this).attr('href').split('#')[1];
+            if(hash){
+                e.preventDefault();
+                $('html').removeClass('open');
+                $menuBtn.removeClass('active');
+                $menuBox.stop(false,false).animate({top:-100+"%"},function(){
+                    $(this).hide();
+                });
+                navItem = 0;
+                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 800);
+            }
+        });
     })
 </script>
 </body>

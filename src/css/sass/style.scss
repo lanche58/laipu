@@ -4,8 +4,8 @@
 .mtop{ height: 88px; }
 .header{
     height: 88px;  line-height: 24px;
-    .logo{ height: 100%; width: 240px; float: left; background: $mc1; 
-        > img{ display: block; margin: 20px 0 0 45px; width: 143px; }
+    .logo{ height: 100%; width: 240px; float: left; background: $mc1;
+        > img{ display: block; margin: 20px 0 0 45px; width: 143px; @include mt3; }
     }
     .h-news{ float: right; height: 100%; width: 34%; background: $fc1; }
     .c{ position: relative; margin: 0 34% 0 240px; height: 100%; }
@@ -29,14 +29,28 @@
             }
         }
     }
+    .navth, .pull-nav{ position: absolute; padding: 10px 0; width: 160px; border: 1px solid $hc2; @include bs; background: #fff; @include hide; @include mt3; }
     .pull-nav{
-        position: absolute; z-index: -1; left: 50%; top: 100%; padding: 10px 0; margin: -1px 0 0 -80px; width: 160px; border: 1px solid $hc2; @include bs; background: #fff; transform: translateY(-100%); @include hide; @include mt3;
-        a{ display: block; padding: (29px - 19px) / 2 5%; line-height: 1.4; text-align: center; 
-            &:hover{ color: $mc2; }
+        z-index: -1; left: 50%; top: 100%; margin: -1px 0 0 -80px; transform: translateY(-100%); 
+        a{ display: block; line-height: 1.4; padding: (29px - 19px) / 2 15px; text-align: center; }
+        .pv{ position: relative; 
+            &:hover{
+                > a{ color: $mc2; }
+                .navth{ transform: none; @include show; }
+            }
         }
+    }
+    .navth{
+        position: absolute; left: 100%; top: 0; transform: translateY(20px);
+        &:before{ @include ba; right: 100%; top: 6px; width: 0; height: 0; border-right: 10px solid; border-top: 7px solid transparent; border-bottom: 7px solid transparent; color: $hc2; }
+        a:hover{ text-decoration: underline; color: $mc2; }
     }
     .menu-btn,
     .h-lang{ float: right; }
+}
+@media screen and (min-width:1025px) {
+    .header .logo:hover{ background: $mc4; }
+    .header .logo:hover > img{ transform: scale(.9); }
 }
 .h-lang{
     position: relative; border-left: 1px solid $hc2; background: #fff; cursor: pointer;
@@ -387,7 +401,6 @@
 }
 @media screen and (min-width:1025px) {
     .ix-cul-list .slick-current:hover .pai img{ transform: scale(1.1); }
-    // .ix-cul-list .slick-current:hover .nowti{ color: $mc2; }
 }
 .ab3 .freeTx{ text-align: center; }
 .ab-pw{ width: 1280px; margin: 0 auto; }
@@ -397,8 +410,11 @@
             .pic{ float: right; }
         }
         + li{ margin-top: 15px; }
+        &:nth-child(2n) .clearfix:before{ left: 50%; }
     }
-    .clearfix{ background: $mc3; }
+    .clearfix{ position: relative; z-index: 1; background: $mc3; 
+        &:before{ @include hl($mc1,100%); z-index: -1; }
+    }
     .pic{ width: 50%; float: left; }
     .txts{ width: 50%; float: left; padding: 50px 45px 0 45px; @include bs; @include mt3; }
     .en{ position: relative; padding-left: 40px; color: $mc7; text-transform: uppercase; font-size: 30px; font-weight: bold; 
@@ -408,7 +424,7 @@
     .freeTx{ margin-top: 12px; font-size: 16px; }
 }
 @media screen and (min-width:1025px) {
-    .cul-list .clearfix:hover{ background: $mc1; }
+    .cul-list .clearfix:hover:before{ @include hlw; width: 50%; }
     .cul-list .clearfix:hover .ch,
     .cul-list .clearfix:hover .txts{ color: #fff; }
     .cul-list .clearfix:hover .en:before{ background: #fff; }
@@ -417,7 +433,7 @@
 .slick-prev:before{ content: "\e660"; }
 .slick-next:before{ content: "\e65f"; }
 .ix-arrow{
-    .slick-arrow{ width: 60px; height: 60px; border-radius: 100%; background: url(../images/white1.png); background: rgba(255,255,255,.4); font-size: 24px; color: #fff; line-height: 60px; }
+    .slick-arrow{ width: 60px; height: 60px; border-radius: 100%; background: #fff; background: rgba(255,255,255,.8); font-size: 24px; color: $mc1; line-height: 60px; }
     .slick-prev{ left: 10px; }
     .slick-next{ right: 10px; }
 }
@@ -447,11 +463,13 @@
 @media screen and (min-width:1025px) {
     .ab-more:hover{ background: $mc1; border-color: $mc1; color: #fff; }
     .ab-more:hover span{ color: #fff; } 
-    .ab-more:hover .cnum{ color: $mc2; }
+    .ab-more:hover .cnum{ color: #fff; }
 }
 .news-list{
     li{ width: 50%; float: left; border-bottom: 1px solid $hc1; }
-    a{ display: block; height: 305px; padding: 70px 40px 0 40px; @include bs; border-right: 1px solid $hc1; overflow: hidden; }
+    a{ position: relative; z-index: 1; display: block; height: 305px; padding: 70px 40px 0 40px; @include bs; border-right: 1px solid $hc1; overflow: hidden; 
+        &:before{ @include hl($mc1, 100%); z-index: -1; }
+    }
     .item1{
         a{ margin-left: (155 / 960) * 100%; border-left: 1px solid $hc1; }
     }
@@ -474,7 +492,8 @@
     }
 }
 @media screen and (min-width:1025px) {
-    .news-list a:hover{ background: $mc1; color: #fff; }
+    .news-list a:hover:before{ @include hlw; }
+    .news-list a:hover{ color: #fff; }
     .news-list a:hover .nw-date{ background: $mc8; }
     .news-list a:hover .nowti{ color: #fff; text-decoration: underline; }
 }
@@ -542,25 +561,29 @@
     .picbox{ width: 50.67%; margin-right: 130px; float: left; overflow: visible; }
     .txts{ overflow: hidden; }
     .pai{ padding-bottom: (420 / 755) * 100%; }
-    .pic{ position: absolute; top: -80px; right: -30px; width: (625 / 755) * 100%; transform: translateX(60px); opacity: 0; visibility: hidden; overflow: visible; }
+    .pic{ position: absolute; top: -80px; right: -30px; width: (625 / 755) * 100%; overflow: visible; }
     .pro-more{ position: absolute; bottom: 0; right: 0; }
     .num{ margin-bottom: 70px; color: $mc1; font-size: 18px; 
         span{ @include di; border-bottom: 2px solid $mc1; width: 20px; @include mt3; }
     }
-    .nowti{ font-size: 30px; color: $fc1; }
+    .nowti{ font-size: 30px; color: $fc1; @include mt3; }
     .tx{ margin-top: 25px; max-height: 48px; }
     .active{
         .pic{ transform: none; opacity: 1; visibility: visible; }
     }
 }
 .pro-more{
-    width: 115px; height: 190px; padding-top: 70px; @include bs; background: $mc1; color: #fff; text-align: center;
+    z-index: 1; width: 115px; height: 190px; padding-top: 70px; @include bs; background: $mc1; color: #fff; text-align: center;
     .btn-sjr{ display: block; margin: 23px - 8px auto 0 auto; }
+    &:before{ @include hl($mc4, 100%); z-index: -1; }
 }
 @media screen and (min-width:1025px) {
     .pro-list li:hover .pic img{ transform: translateY(20px); }
     .pro-list li:hover .pai img{ transform: scale(1.1); }
     .pro-list li:hover .num span{ width: 40px; }
+    .pro-list li:hover a{ color: $mc1; }
+    .pro-list li:hover .nowti{ color: $mc1; }
+    .pro-list li:hover .pro-more:before{ @include hlw; }
 }
 .pro3{ padding-bottom: 90px; border-top: 1px solid $hc1; 
     .bodr{ border-bottom: 1px solid $hc1; }
@@ -587,7 +610,7 @@
     }
     .pic{ width: 50%; float: left; }
     .txts{ width: 50%; float: left; @include bs; padding: 70px 45px 0 45px; }
-    .nowti{ font-size: 24px; color: $fc1; }
+    .nowti{ font-size: 24px; color: $fc1; @include mt3; }
     .tx{ margin-top: 25px; height: 48px; }
     .prot-more{ position: absolute; right: 0; bottom: 0; }
 }
@@ -600,7 +623,8 @@
     .prot-more-h:hover{
         .prot-more:before{ @include hlw; }
     }
-    .prot-list a:hover{ border-color: $mc1; }
+    .prot-list a:hover{ border-color: $mc1; color: $mc1; }
+    .prot-list a:hover .nowti{ color: $mc1; }
 }
 .pro-hot{
     background: $mc1; padding: 70px 0 50px 0; color: #fff;
@@ -720,7 +744,7 @@
     .icon{ @include di; font-size: 20px; margin-right: 10px; }
 }
 @media screen and (min-width:1025px) {
-    .cta-qq:hover{ background: $mc2; }
+    .cta-qq:hover{ background: $mc4; }
     .cta-list a:not(.na):hover{ color: $mc1; }
 }
 .online-message-form{
@@ -736,7 +760,7 @@
     .subBtn{ width: 138px; height: 48px; margin-top: 25px; background: $mc1; color: #fff; @include mt3; }
 }
 @media screen and (min-width:1025px) {
-    .online-message-form .subBtn:hover{ background: $mc2; }
+    .online-message-form .subBtn:hover{ background: $mc4; }
 }
 .cta2{
     .online-message-form{ margin-top: 35px; }
@@ -755,11 +779,11 @@
 @media screen and (min-width:1025px) {
     .sos-box .ib:hover{ color: $mc1; }
 }
-.cul-next{ position: absolute; z-index: 199; right: 10px; top: 50%; margin-top: -30px; @include c(60px); background: url(../images/white1.png); background: rgba(255,255,255,.4); font-size: 24px; color: #fff; font-family: iconfont!important; text-align: center; line-height: 60px; cursor: pointer; @include mt3; }
+.cul-next{ position: absolute; z-index: 199; right: 10px; top: 50%; margin-top: -30px; @include c(60px); background: #fff; background: rgba(255,255,255,.8); font-size: 24px; color: $mc1; font-family: iconfont!important; text-align: center; line-height: 60px; cursor: pointer; @include mt3; }
 .ix-cul{ position: relative; }
 @media screen and (min-width:1025px) {
     .ix-arrow .slick-arrow:hover,
-    .cul-next:hover{ background: #fff; color: $mc2; }
+    .cul-next:hover{ background: $mc1; color: #fff; }
 }
 .ix-cul-t{
     line-height: 24px; padding-left: 20px;
