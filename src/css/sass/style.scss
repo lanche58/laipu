@@ -249,8 +249,12 @@
 .ix-ab{
     position: relative; background: $mc1; color: #fff;
     &:before{ @include hl($mc4, 100%); }
-    a{ display: block; position: relative; padding: 130px 50px 0 50px; @include bs; color: #fff; }
-    .nowti{ margin-bottom: 10px; font-size: 24px; }
+    a{ display: block; position: relative; padding: 55px 50px 0 50px; @include bs; color: #fff; }
+    .nowti{ margin-bottom: 90px; font-size: 16px; 
+        span{ @include di; position: relative; 
+            &:before{ @include hl(#fff, 1px); }
+        }
+    }
     .tx{ width: 420px; height: 48px; max-width: 100%; }
     .ix-more{ margin-top: 50px; }
 }
@@ -279,6 +283,7 @@
     .ix-ab:hover:before{ @include hlw; }
     .ix-more:hover .btn-sjr,
     .ix-ab:hover .btn-sjr{ transform: translateX(-10px); }
+    .ix-ab:hover .nowti span:before{ @include hlw; }
 }
 .ix-news{
     width: 33.33%; float: left;

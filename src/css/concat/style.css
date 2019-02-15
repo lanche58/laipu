@@ -622,12 +622,25 @@
   .ix-ab a {
     display: block;
     position: relative;
-    padding: 130px 50px 0 50px;
+    padding: 55px 50px 0 50px;
     box-sizing: border-box;
     color: #fff; }
   .ix-ab .nowti {
-    margin-bottom: 10px;
-    font-size: 24px; }
+    margin-bottom: 90px;
+    font-size: 16px; }
+    .ix-ab .nowti span {
+      display: inline-block;
+      vertical-align: bottom;
+      position: relative; }
+      .ix-ab .nowti span:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: #fff;
+        transition: 600ms; }
   .ix-ab .tx {
     width: 420px;
     height: 48px;
@@ -687,7 +700,9 @@
     width: 100%; }
   .ix-more:hover .btn-sjr,
   .ix-ab:hover .btn-sjr {
-    transform: translateX(-10px); } }
+    transform: translateX(-10px); }
+  .ix-ab:hover .nowti span:before {
+    width: 100%; } }
 
 .ix-news {
   width: 33.33%;

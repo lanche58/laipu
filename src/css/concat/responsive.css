@@ -70,7 +70,9 @@
     .cta-tx .case-ti{ font-size: 24px; }
     .ix1 .ix-ab-ti .pa{ padding: 90px 0 0 200px; }
     .ix1 .ix-ab{ height: 270px; }
-    .ix-ab a{ padding: 70px 40px 0 40px; }
+    .ix-ab a{ padding: 45px 40px 0 40px; }
+    .ix-ab .nowti{ margin-bottom: 60px; }
+    .ix-ab .ix-more{ margin-top: 40px; }
     .ix-ab-ti .ti1{ font-size: 24px; }
     .ix-ab-ti .ti2{ font-size: 40px; }
     .ix-news.item1 a{ height: 580px; }
@@ -404,13 +406,8 @@
     .ab7 .case-ti{ margin-bottom: 2.5vw; }
     .ab7 .freeTx{ margin-bottom: 6.67vw; }
     .ab7 .ab-honor{ margin-bottom: 6.67vw; }
-
-
-
-
-
-
-
+    .ix-ab .nowti{ margin-bottom: 10vw; }
+    .ix-ab .ix-more{ margin-top: 6.67vw; }
 } /* 601 */
 @media screen and (max-width:481px) {
     .menu-btn{ width: 59px; }
@@ -472,7 +469,7 @@
     .sos-box .ch{ font-size: 20px; }
     .ix-ab-ti .ti1{ font-size: 16px; }
     .ix-ab-ti .ti2{ font-size: 26px; }
-    .ix-ab .nowti{ font-size: 20px; }
+    /* .ix-ab .nowti{ font-size: 20px; } */
     .ix-pro-list .nowti{ font-size: 14px; }
     .ip-ti{ font-size: 22px; }
     .ix-ser-list .tx{ font-size: 16px; }
@@ -484,11 +481,6 @@
     .ab-link-list .pai{ height: 220px; padding-bottom: 0; }
     .ab-link-list .tx{ font-size: 18px; height: 52px; line-height: 26px !important; }
     .online-message-form .s-input{ padding-left: 10px; padding-right: 10px; }
-
-    
-    
-    
-
 } /* 481 */
 @media screen and (max-width:361px) {} /* 361 */
 @media screen and (max-width:321px) {} /* 341 */
