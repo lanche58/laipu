@@ -108,6 +108,7 @@ $(function () {
             $('.pbanner .pic2 img').css('transform', "translate(0px," + (windowTop) / 1.5 + "px)");
             $('.pro-banner .pic2 img').css('transform', "translate(0px," + (windowTop) / 1.5 + "px)");
         }
+        windowTop > 1 ? $('#top').addClass('show') : $('#top').removeClass('show');
     });
  
 	// Imitation placeholder function
@@ -124,6 +125,8 @@ $(function () {
     });
 
     // Back to top
+
+
     $('#top').bind(_click, function(){
     	$('html,body').stop().animate({scrollTop: 0}, 800);
     });

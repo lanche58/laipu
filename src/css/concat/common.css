@@ -51,11 +51,12 @@ a {
 	}
 }
 .header {
-	position: fixed;
+	position: relative;
+	/* position: fixed; */
 	z-index: 1010;
-	top: 0;
-	left: 0;
-	right: 0;
+	/* top: 0; */
+	/* left: 0; */
+	/* right: 0; */
 	background: #fff;
 	/* box-shadow: 0 0 5px rgba(0, 0, 0, .5); */
 }

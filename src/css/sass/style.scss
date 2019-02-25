@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import "color";
 @import "repeat";
-.mtop{ height: 88px; }
 .header{
     height: 88px;  line-height: 24px;
     .logo{ height: 100%; width: 240px; float: left; background: $mc1;
@@ -232,14 +231,19 @@
     .f-share a:hover{ background: #fff; color: $mc1 !important; }
     .footer a:not(.na):hover{ color: $mc2; }
 }
-#top{ position: fixed; right: 15px; bottom: 15px; @include c(40px); background: $mc11; line-height: 40px; text-align: center; color: #fff; text-transform: uppercase; font-size: 12px; display: none; }
+#top{ position: fixed; z-index: 9999; right: 15px; bottom: 15px; @include c(60px); background: $mc2; line-height: 60px; text-align: center; color: #fff; text-transform: uppercase; cursor: pointer; transform: translateY(20px); @include hide; @include mt4; 
+    &.show{ transform: none; @include show; }
+}
+@media screen and (min-width:1025px) {
+    #top:hover{ background: $mc4; } 
+}
 // footer end
 .ix1{
     .ix-ab-ti{ float: left; width: 66%; 
         .pa{ padding: 109px 0 0 240px; }
     }
     .ix-ab{ width: 34%; height: 330px; float: right; }
-    .fixbg{ padding-bottom: 35%; }
+    .fixbg{ padding-bottom: 35%; background-attachment: scroll; }
 }
 .ix-ab-ti{
     color: $fc1;
@@ -250,7 +254,7 @@
     position: relative; background: $mc1; color: #fff;
     &:before{ @include hl($mc4, 100%); }
     a{ display: block; position: relative; padding: 55px 50px 0 50px; @include bs; color: #fff; }
-    .nowti{ margin-bottom: 90px; font-size: 16px; 
+    .nowti{ margin-bottom: 60px; font-size: 16px; 
         span{ @include di; position: relative; 
             &:before{ @include hl(#fff, 1px); }
         }

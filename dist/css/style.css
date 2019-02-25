@@ -32,7 +32,7 @@ a{color:#666}
 @media screen and (max-width:1024px){
 .ly-cont{position:relative;width:100%;height:100%;overflow:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}
 }
-.header{position:fixed;z-index:1010;top:0;left:0;right:0;background:#fff}
+.header{position:relative;z-index:1010;background:#fff}
 .menuBox{position:fixed;z-index:1009;top:-100%;right:0;width:100%;height:100%;background:#fff;overflow:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}
 .menuBlack{position:fixed;z-index:1008;top:0;bottom:0;right:0;left:0;background:url(../images/black5.png);display:none}
 .container{min-height:600px;overflow:hidden}
@@ -729,7 +729,6 @@ a.pswp__share--download:hover{background:#ddd}
 .dnSlide-main .dnSlide-item{position:absolute;top:0;left:0}
 .dnSlide-main .dnSlide-left-btn{left:-55px}
 .dnSlide-main .dnSlide-right-btn{right:-55px}
-.mtop{height:88px}
 .header{height:88px;line-height:24px}
 .header .logo{height:100%;width:240px;float:left;background:#124bbe}
 .header .logo>img{display:block;margin:20px 0 0 45px;width:143px;-webkit-transition:.3s;-moz-transition:.3s;transition:.3s}
@@ -882,18 +881,22 @@ a.pswp__share--download:hover{background:#ddd}
 .f-share a:hover{background:#fff;color:#124bbe!important}
 .footer a:not(.na):hover{color:#124bbe}
 }
-#top{position:fixed;right:15px;bottom:15px;width:40px;height:40px;border-radius:100%;background:rgba(13,78,152,.9);line-height:40px;text-align:center;color:#fff;text-transform:uppercase;font-size:12px;display:none}
+#top{position:fixed;z-index:9999;right:15px;bottom:15px;width:60px;height:60px;border-radius:100%;background:#124bbe;line-height:60px;text-align:center;color:#fff;text-transform:uppercase;cursor:pointer;-webkit-transform:translateY(20px);-moz-transform:translateY(20px);-ms-transform:translateY(20px);transform:translateY(20px);opacity:0;visibility:hidden;-webkit-transition:.4s;-moz-transition:.4s;transition:.4s}
+#top.show{-webkit-transform:none;-moz-transform:none;-ms-transform:none;transform:none;opacity:1;visibility:visible}
+@media screen and (min-width:1025px){
+#top:hover{background:#113e98}
+}
 .ix1 .ix-ab-ti{float:left;width:66%}
 .ix1 .ix-ab-ti .pa{padding:109px 0 0 240px}
 .ix1 .ix-ab{width:34%;height:330px;float:right}
-.ix1 .fixbg{padding-bottom:35%}
+.ix1 .fixbg{padding-bottom:35%;background-attachment:scroll}
 .ix-ab-ti{color:#333}
 .ix-ab-ti .ti1{font-size:30px}
 .ix-ab-ti .ti2{font-size:50px}
 .ix-ab{position:relative;background:#124bbe;color:#fff}
 .ix-ab:before{content:"";position:absolute;left:0;bottom:0;width:0;height:100%;background:#113e98;-webkit-transition:.6s;-moz-transition:.6s;transition:.6s}
 .ix-ab a{display:block;position:relative;padding:55px 50px 0 50px;-moz-box-sizing:border-box;box-sizing:border-box;color:#fff}
-.ix-ab .nowti{margin-bottom:90px;font-size:16px}
+.ix-ab .nowti{margin-bottom:60px;font-size:16px}
 .ix-ab .nowti span{display:inline-block;vertical-align:bottom;position:relative}
 .ix-ab .nowti span:before{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:#fff;-webkit-transition:.6s;-moz-transition:.6s;transition:.6s}
 .ix-ab .tx{width:420px;height:48px;max-width:100%}
@@ -1381,7 +1384,7 @@ a.pswp__share--download:hover{background:#ddd}
 .ix1 .ix-ab-ti .pa{padding:90px 0 0 200px}
 .ix1 .ix-ab{height:270px}
 .ix-ab a{padding:45px 40px 0 40px}
-.ix-ab .nowti{margin-bottom:60px}
+.ix-ab .nowti{margin-bottom:50px}
 .ix-ab .ix-more{margin-top:40px}
 .ix-ab-ti .ti1{font-size:24px}
 .ix-ab-ti .ti2{font-size:40px}
@@ -1398,7 +1401,7 @@ a.pswp__share--download:hover{background:#ddd}
 .ix-pro .ip-ti{margin-bottom:40px}
 .ix-pro-bg{height:712px}
 .ix-cul-list:after{margin-right:500px}
-.ix-cul-list .item{width:750px}
+.ix-cul-list .item{width:786px}
 .ix5{padding-bottom:90px}
 .ix-ser-list .tx{font-size:20px;line-height:26px!important;height:52px}
 .ix-ser-list .b{padding-top:45px;height:305px}
@@ -1426,6 +1429,8 @@ a.pswp__share--download:hover{background:#ddd}
 .dnSlide-main .dnSlide-right-btn{right:0}
 }
 @media screen and (max-width:1024px){
+.header{position:fixed;left:0;right:0;top:0}
+.mtop{height:88px}
 .header .nav{display:none}
 .h-lang>p{padding-left:30px;padding-right:30px}
 .header .c{margin-right:130px}
@@ -1701,7 +1706,7 @@ a.pswp__share--download:hover{background:#ddd}
 .ab7 .case-ti{margin-bottom:2.5vw}
 .ab7 .freeTx{margin-bottom:6.67vw}
 .ab7 .ab-honor{margin-bottom:6.67vw}
-.ix-ab .nowti{margin-bottom:10vw}
+.ix-ab .nowti{margin-bottom:8.33vw}
 .ix-ab .ix-more{margin-top:6.67vw}
 }
 @media screen and (max-width:481px){
