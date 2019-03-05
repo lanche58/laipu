@@ -280,8 +280,8 @@
     </div>
     
     <div class="ix5">
-        <div class="pw ix-cul-t clearfix">
-            <h3 class="ti">生产略影</h3>
+        <div class="ix-cul-t clearfix">
+            <h3 class="ti">企业风采</h3>
             <p class="cul-nums">
                 <span class="cnum">01</span>
                 <span class="line"><i></i></span>
@@ -290,38 +290,34 @@
         </div>
         
         <div class="ix-cul">
-            <div class="pw">
-                <div class="ix-cul-list ix-arrow u-slick">
-                    <div class="item">
-                        <a class="ma" href="news-detail.html">
-                            <div class="pai"><img src="img/ix_i2.jpg" alt=""></div>
-                            <h3 class="nowti">2019CPhI世界制药原料中国展</h3>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="ma" href="news-detail.html">
-                            <div class="pai"><img src="img/ix_i3.jpg" alt=""></div>
-                            <h3 class="nowti">2019CPhI世界制药原料中国展</h3>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="ma" href="news-detail.html">
-                            <div class="pai"><img src="img/ix_i2.jpg" alt=""></div>
-                            <h3 class="nowti">2019CPhI世界制药原料中国展</h3>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="ma" href="news-detail.html">
-                            <div class="pai"><img src="img/ix_i3.jpg" alt=""></div>
-                            <h3 class="nowti">2019CPhI世界制药原料中国展</h3>
-                        </a>
-                    </div>
+            <div class="ix-cul-list ix-arrow u-slick">
+                <div class="item">
+                    <a class="ma" href="news-detail.html">
+                        <div class="pai"><img src="img/ix_i2.jpg" alt=""></div>
+                        <h3 class="nowti">2019CPhI世界制药原料中国展</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="ma" href="news-detail.html">
+                        <div class="pai"><img src="img/ix_i3.jpg" alt=""></div>
+                        <h3 class="nowti">2019CPhI世界制药原料中国展</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="ma" href="news-detail.html">
+                        <div class="pai"><img src="img/ix_i2.jpg" alt=""></div>
+                        <h3 class="nowti">2019CPhI世界制药原料中国展</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="ma" href="news-detail.html">
+                        <div class="pai"><img src="img/ix_i3.jpg" alt=""></div>
+                        <h3 class="nowti">2019CPhI世界制药原料中国展</h3>
+                    </a>
                 </div>
             </div>
-            <div class="cul-next icon iconfont icon-xiangyoujiantou"></div>
         </div>
         
-        <div class="btn-box tac pw"><a href="news1.html" class="ai-more btn">Read more</a></div>
     </div>
     
 </div>
@@ -381,7 +377,6 @@
             slidesToShow: 2,
             slidesToScroll: 1,
             variableWidth: true,
-            nextArrow: '.cul-next',
             autoplay: true,
             autoplaySpeed: 5000,
             speed: 800,
@@ -391,8 +386,7 @@
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    variableWidth: false,
-                    nextArrow: '<a class="slick-next"><i></i></a>'
+                    variableWidth: false
                 }
             }
             ]
@@ -409,6 +403,9 @@
             "scale": 0.85
         };
         if (!isMobile) { $('.dnSlide-main').dnSlide(setting); }
+        setTimeout(function(){
+            $('.dnSlide-main li').eq(0).addClass('item3');
+        }, 0);
         $('.ab-link-list li').each(function(i, e) {
            $(this).css({
                'transition-delay': 200*i + 'ms',

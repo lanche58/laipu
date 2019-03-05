@@ -259,6 +259,7 @@
 
             rightItems.each(function(i,e){
 
+
                 $(e).css({
                     "width"  : rw,
                     "height" : rh,
@@ -315,9 +316,11 @@
                             self_.rotateFlag = true ;
                         });
                 });
-                //让z-index转化效果优先于别的提高交互
                 this.dnSlideItems.find('li').each(function(i){
-                    $(this).css("zIndex",indexArr[i]);
+                    for (var k in indexArr) {
+                        $(this).removeClass('item' + k);
+                    }
+                    $(this).addClass('item' + indexArr[i]).css("zIndex",indexArr[i]);
                     arr.push(parseInt(indexArr[i]));
                 });
             }else if(dir==='right'){
@@ -342,8 +345,12 @@
                             self_.rotateFlag = true ;
                         });
                 });
+                
                 this.dnSlideItems.find('li').each(function(i){
-                    $(this).css("zIndex",indexArr[i]);
+                    for (var k in indexArr) {
+                        $(this).removeClass('item' + k);
+                    }
+                    $(this).addClass('item' + indexArr[i]).css("zIndex",indexArr[i]);
                     arr.push(parseInt(indexArr[i]));
                 });
             }

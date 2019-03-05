@@ -841,7 +841,7 @@
   border-bottom: 1px solid #e5e5e5; }
   .ix-pro .ma {
     border-left: 1px solid #e5e5e5;
-    margin-left: 12%;
+    margin-left: 150px;
     padding: 100px 0; }
   .ix-pro .ix-more2,
   .ix-pro .ip-ti {
@@ -968,7 +968,7 @@
     animation: logoShow .5s 1; } }
 
 .ix4 {
-  padding-top: 55px;
+  padding: 55px 150px 0 150px;
   position: relative; }
   .ix4:before {
     content: "";
@@ -981,55 +981,45 @@
 
 .ix5 {
   border-top: 1px solid #e5e5e5;
-  padding: 60px 0 100px 0; }
+  padding: 60px 0 100px 150px; }
   .ix5 .ix-cul-t {
     margin-bottom: 35px; }
   .ix5 .btn-box {
     margin-top: 45px; }
 
-.ix-cul-list {
-  overflow: visible; }
-  .ix-cul-list:after {
+.ix-cul-list .item {
+  width: 1120px; }
+
+.ix-cul-list .ma {
+  margin-right: 5px;
+  display: block;
+  position: relative;
+  color: #fff;
+  cursor: default; }
+  .ix-cul-list .ma:after {
     content: "";
     position: absolute;
-    z-index: 299;
-    right: 50%;
-    margin-right: 745px;
     top: 0;
     bottom: 0;
-    width: 500px;
-    background: #fff; }
-  .ix-cul-list .slick-list {
-    overflow: visible; }
-  .ix-cul-list .item {
-    width: 1120px; }
-  .ix-cul-list .ma {
-    margin-right: 5px;
-    display: block;
-    position: relative;
-    color: #fff;
-    cursor: default; }
-    .ix-cul-list .ma:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: url(../images/shadow.png) repeat-x left bottom; }
-  .ix-cul-list .slick-current .ma {
-    cursor: pointer; }
-  .ix-cul-list .pai {
-    padding-bottom: 64.28571%; }
-  .ix-cul-list .nowti {
-    font-size: 18px;
-    position: absolute;
     left: 0;
     right: 0;
-    padding: 0 40px;
-    z-index: 9;
-    bottom: 40px;
-    transition: 300ms; }
+    background: url(../images/shadow.png) repeat-x left bottom; }
+
+.ix-cul-list .slick-current .ma {
+  cursor: pointer; }
+
+.ix-cul-list .pai {
+  padding-bottom: 55.35714%; }
+
+.ix-cul-list .nowti {
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0 40px;
+  z-index: 9;
+  bottom: 40px;
+  transition: 300ms; }
 
 @media screen and (min-width: 1025px) {
   .ix-cul-list .slick-current:hover .pai img {
@@ -1191,17 +1181,6 @@
     text-align: center; }
   .honor-list .name {
     display: none; }
-
-@media screen and (min-width: 1025px) {
-  .honor-list a:hover {
-    color: #124bbe; }
-  .honor-list a:hover .pai:after {
-    opacity: 1;
-    visibility: visible; }
-  .honor-list a:hover .icon {
-    transform: none;
-    opacity: 1;
-    visibility: visible; } }
 
 .ab-more {
   width: 120px;
@@ -1653,15 +1632,16 @@
     color: #124bbe; } }
 
 .pro-hot {
-  background: #124bbe;
-  padding: 70px 0 50px 0;
-  color: #fff; }
+  background: #999; }
   .pro-hot .w {
     width: 910px;
     max-width: 90%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 70px 0 50px 0;
+    overflow: hidden; }
   .pro-hot .nowti {
     margin-bottom: 25px;
+    color: #333;
     font-size: 18px;
     font-weight: bold; }
 
@@ -2112,7 +2092,7 @@
       color: #c2d0df; }
   .pro-nav.fix {
     position: fixed;
-    top: 88px;
+    top: 0;
     left: 0;
     z-index: 599;
     max-height: 100%;
@@ -2256,3 +2236,9 @@
   max-width: 100%; }
   .ab-honor .dnSlide-main {
     height: 472px !important; }
+    .ab-honor .dnSlide-main img {
+      transition: 600ms; }
+
+@media screen and (min-width: 1025px) {
+  .dnSlide-main .item3:hover img {
+    transform: scale(1.1); } }

@@ -346,12 +346,11 @@
 }
 .ix-pro{
     width: 66.66%; float: left; border-bottom: 1px solid $hc2;
-    .ma{ border-left: 1px solid $hc2; margin-left: 12%; padding: 100px 0; }
+    .ma{ border-left: 1px solid $hc2; margin-left: 150px; padding: 100px 0; }
     .ix-more2,
     .ip-ti{ padding: 0 17% 0 14%; }
     .ip-ti{ margin-bottom: 50px; }
     .ix-pro-list{ margin-bottom: 40px; }
-    
 }
 .ip-ti{ line-height: 1.4; font-size: 50px; color: $fc1; }
 .ix-pro-list{
@@ -389,23 +388,21 @@
     .ix-ser-list .b:hover .icon{ animation: logoShow .5s 1; }
 }
 .ix4{
-    padding-top: 55px; position: relative;
+    padding: 55px 150px 0 150px;  position: relative;
     &:before{ @include ba; top: 99px; left: 0; right: 0; height: 1px; background: $hc2; }
 }
-.ix5{ border-top: 1px solid $hc2; padding: 60px 0 100px 0; 
+.ix5{ border-top: 1px solid $hc2; padding: 60px 0 100px 150px; 
     .ix-cul-t{ margin-bottom: 35px; }
     .btn-box{ margin-top: 45px; }
 }
+// .ix-cul-t
 .ix-cul-list{
-    overflow: visible;
-    &:after{ @include ba; z-index: 299; right: 50%; margin-right: 745px; top: 0; bottom: 0; width: 500px; background: #fff; }
-    .slick-list{ overflow: visible; }
     .item{ width: 1120px; }
     .ma{ margin-right: 5px; display: block; position: relative; color: #fff; cursor: default;
         &:after{ @include ba; @include tblr; background: url(../images/shadow.png) repeat-x left bottom; }
     }
     .slick-current .ma{ cursor: pointer; }
-    .pai{ padding-bottom: (720 / 1120) * 100%; }
+    .pai{ padding-bottom: (620 / 1120) * 100%; }
     .nowti{ font-size: 18px; @include plr; padding: 0 40px; z-index: 9; bottom: 40px; @include mt3; }
 }
 @media screen and (min-width:1025px) {
@@ -458,11 +455,11 @@
     .nowti{ margin-top: 15px; padding: 0 5%; height: 20px; line-height: 20px; text-align: center; }
     .name{ display: none; }
 }
-@media screen and (min-width:1025px) {
-    .honor-list a:hover{ color: $mc1; }
-    .honor-list a:hover .pai:after{ @include show; }
-    .honor-list a:hover .icon{ transform: none; @include show; }
-}
+// @media screen and (min-width:1025px) {
+//     .honor-list a:hover{ color: $mc1; }
+//     .honor-list a:hover .pai:after{ @include show; }
+//     .honor-list a:hover .icon{ transform: none; @include show; }
+// }
 .ab-more{
     width: 120px; height: 100px; padding-top: 20px; border: 1px solid $fc3; @include bs; line-height: 24px; font-size: 12px; color: $fc1;
     .icon{ display: block; margin-bottom: 10px; font-size: 24px; }
@@ -636,9 +633,9 @@
     .prot-list a:hover .nowti{ color: $mc1; }
 }
 .pro-hot{
-    background: $mc1; padding: 70px 0 50px 0; color: #fff;
-    .w{ width: 910px; max-width: 90%; margin: 0 auto; }
-    .nowti{ margin-bottom: 25px; font-size: 18px; font-weight: bold; }
+    background: $fc3; 
+    .w{ width: 910px; max-width: 90%; margin: 0 auto; padding: 70px 0 50px 0; overflow: hidden; }
+    .nowti{ margin-bottom: 25px; color: $fc1; font-size: 18px; font-weight: bold; }
 }
 .pro-hot-list{
     margin-left: -30px; overflow: visible;
@@ -816,7 +813,7 @@
         padding: 15px 0 15px 25px; display: none;
         a{ font-size: 12px; padding: 10px 0; color: $mc9; }
     }
-    &.fix{ position: fixed; top: 88px; left: 0; z-index: 599; max-height: 100%; padding-bottom: 88px; @include bs; @include sy; 
+    &.fix{ position: fixed; top: 0; left: 0; z-index: 599; max-height: 100%; padding-bottom: 88px; @include bs; @include sy; 
         ul{ border-top: 1px solid #fff; }
     }
     &::-webkit-scrollbar { width: 6px; background: $hc1; }
@@ -864,5 +861,10 @@
     .freeTx{ margin-bottom: 50px; }
 }
 .ab-honor{ width: 1000px; margin: 0 auto; max-width: 100%; 
-    .dnSlide-main{ height: 472px !important; }
+    .dnSlide-main{ height: 472px !important; 
+        img{ @include mt6; }
+    }
+}
+@media screen and (min-width:1025px) {
+    .dnSlide-main .item3:hover img{ transform: scale(1.1); }
 }

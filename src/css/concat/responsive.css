@@ -84,7 +84,8 @@
     .ix-news .ix-date+.ix-date{ margin-top: 5px; }
     .ix-news-list .b{ margin-bottom: 40px; }
     .ip-ti{ font-size: 32px; }
-    .ix-pro .ma{ margin-left: 10%; padding: 70px 0; }
+    .ix-pro .ma{ margin-left: 90px; padding: 70px 0; }
+    .ix4{ padding-left: 90px; padding-right: 90px; }
     .ix-pro .ip-ti, .ix-pro .ix-more2, .ix-pro-list a{ padding: 0 12%; }
     .ix-pro-list .clearfix{ padding: 23px 0; }
     .ix-pro .ip-ti{ margin-bottom: 40px; }
@@ -100,6 +101,7 @@
     .pro-nav{ width: 200px; }
     .pro-hot .w,
     .pd-b .freeTx{ width: 780px; }
+    .ix5{ padding-left: 90px; }
 
 } /* 1366 */
 @media screen and (max-width:1281px) {
@@ -162,7 +164,7 @@
     .prot-list .tx{ margin-top: 15px; }
     .pnav .b{ display: none; }
     .pro-hot-list .item{ padding: 0; }
-    .pro-hot{ padding-bottom: 70px; }
+    .pro-hot .w{ padding-bottom: 70px; }
     .pro-hot .nowti{ margin-bottom: 45px; }
     .pro-hot-list .slick-arrow{ margin-bottom: 35px; }
     .case-pw{ width: 90%; }
@@ -197,7 +199,8 @@
     .ab-honor .dnSlide-main img{ width: 18.4%; float: left; margin: 0 2% 2% 0; }
     .ab-honor .dnSlide-main img:nth-child(5n){ margin-right: 0; }
     .ab7 .ab-honor{ margin-bottom: 40px; }
-
+    .ix-pro .ma{ margin-left: 70px; }
+    .ix5, .ix4{ padding-left: 70px; padding-right: 70px; }
 } /* 1024 */
 @media screen and (max-width:861px) {
     .pbanner .pic2{ height: 43vw; }
@@ -264,8 +267,7 @@
     .ab-honor .dnSlide-main img{ width: 32%; }
     .ab-honor .dnSlide-main img:nth-child(5n){ margin-right: 2%; }
     .ab-honor .dnSlide-main img:nth-child(3n){ margin-right: 0; }
-
-
+    .ix5, .ix4{ padding-left: 5%; padding-right: 5%; }
 } /* 861 */
 @media screen and (max-width:641px) {
     .mtop, .header{ height: 60px; }
@@ -343,7 +345,7 @@
     .prot-list .prot-more{ margin-top: 6.67vw; }
     .prot-list a{ padding-bottom: 8.33vw; }
     .prot-list a+a{ margin-top: 5.83vw; }
-    .pro-hot{ padding: 12vw 0; }
+    .pro-hot .w{ padding: 12vw 0; }
     .flow-list li{ width: 50%; }
     .flow-list .r{ float: left; }
     .flow-list .icon{ display: none; }
@@ -386,11 +388,11 @@
     .ix-ser-list .tx{ height: auto; line-height: 1.4 !important; }
     .ix-ser-list .ix-more{ margin-top: 70px; }
     .ix-ser-list .icon{ right: 5%; bottom: 15px; }
-    .ix4{ padding: 12vw 0; }
+    .ix4{ padding-top: 12vw; padding-bottom: 12vw; }
     .ix-ser-list li + li{ margin-top: 5vw; }
     .ix-cul-t{ padding-left: 3.33vw; }
     .ix5 .ix-cul-t{ margin-bottom: 5.83vw; }
-    .ix5{ padding: 12vw 0 15vw 0; }
+    .ix5{ padding-top: 12vw; padding-bottom: 15vw; }
     .ix-cul-list .nowti{ bottom: 5%; }
     .ix-arrow .slick-arrow{ width: 48px; height: 48px; line-height: 48px; font-size: 20px; }
     .ix-news-list,
