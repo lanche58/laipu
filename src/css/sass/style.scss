@@ -520,12 +520,19 @@
 }
 .nd-back{
     border-top: 1px solid #ccc;
-    a{ width: 33.33%; float: left; @include bs; border-left: 1px solid #ccc; line-height: 90px; text-align: center; 
+    a{ width: 33.33%; float: left; position: relative; @include bs; border-left: 1px solid #ccc; line-height: 90px; text-align: center; 
         &:first-child{ border: none; }
     }
+    .btn-sjr{ position: absolute; top: 50%; margin-top: -1px; background: $mc1; color: $mc1; @include hide; @include mt3; }
+    .prev .btn-sjr{ left: 10%; transform: translateX(100%);
+        &:before{ border-left-width: 0; border-right: 4px solid; left: auto; right: 100%; }
+    }
+    .next .btn-sjr{ right: 10%; transform: translateX(-100%); }
 }
 @media screen and (min-width:1025px) {
-    .nd-back a:hover{ background: $mc1; color: #fff; }
+    // .nd-back a:hover{ background: $mc1; color: #fff; }
+    .nd-back a:hover{ color: $mc1; }
+    .nd-back a:hover .btn-sjr{ transform: none; @include show; }
 }
 .mien-list{
     li{ border-bottom: 1px solid $hc1; padding: 0 (155 / 1920) * 100%; }
@@ -633,7 +640,7 @@
     .prot-list a:hover .nowti{ color: $mc1; }
 }
 .pro-hot{
-    background: $fc3; 
+    background: $hc3; 
     .w{ width: 910px; max-width: 90%; margin: 0 auto; padding: 70px 0 50px 0; overflow: hidden; }
     .nowti{ margin-bottom: 25px; color: $fc1; font-size: 18px; font-weight: bold; }
 }
@@ -647,7 +654,7 @@
     .slick-prev{ margin-right: 41px; }
 }
 @media screen and (min-width:1025px) {
-    .pro-hot-list .item a:hover{ transform: translateY(-10px); }
+    // .pro-hot-list .item a:hover{ transform: translateY(-10px); }
     .pro-hot-list .slick-arrow:hover{ background: #000; color: #fff; } 
 }
 .case-pw{ width: 1200px; margin: 0 auto; }
@@ -814,7 +821,7 @@
         a{ font-size: 12px; padding: 10px 0; color: $mc9; }
     }
     &.fix{ position: fixed; top: 0; left: 0; z-index: 599; max-height: 100%; padding-bottom: 88px; @include bs; @include sy; 
-        ul{ border-top: 1px solid #fff; }
+        // ul{ border-top: 1px solid #fff; }
     }
     &::-webkit-scrollbar { width: 6px; background: $hc1; }
     &::-webkit-scrollbar-thumb { background: $mc2; }
