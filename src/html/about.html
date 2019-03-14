@@ -48,7 +48,7 @@
         <h2 class="case-ti trans transY">资质荣誉</h2>
         <div class="freeTx tac trans transY dly-1">秉承专业精神，专注核心优势，追求卓越品质，精益求精，始终如一</div>
         <div class="ab-honor trans transY dly-2">
-            <div class='dnSlide-main'>
+            <div class='dnSlide-main' data-url="about4.html">
                 <img src="img/ab_i333.jpg" width="100%">
                 <img src="img/ab_i333.jpg" width="100%">
                 <img src="img/ab_i333.jpg" width="100%">
@@ -63,7 +63,7 @@
     <!-- ab7 -->
     <div class="ix5">
         <div class="ix-cul-t clearfix">
-            <h3 class="ti">企业风采</h3>
+            <h3 class="ti">生产掠影</h3>
             <p class="cul-nums">
                 <span class="cnum">01</span>
                 <span class="line"><i></i></span>
@@ -106,8 +106,8 @@
 <!-- container -->
 @@include('./footer.html')
 <script src="js/page.js"></script>
-<script src="js/dnSlide.js"></script>
 <script src="js/expandJS.js"></script>
+<script src="js/dnSlide.js"></script>
 <script>
     $(function(){
         var maxnum = $('.ix-cul-list .item').length;
@@ -155,7 +155,10 @@
                '-webkit-transition-delay': 200*i + 'ms'
            })
        });
-        
+       $(document).on(_click, '.dnSlide-main .item3', function() {
+            var url = $(this).parents('.dnSlide-main').data('url');
+            window.location.href = url;
+       });
     })
 </script>
 </body>
