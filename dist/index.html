@@ -237,7 +237,12 @@
                 <div class="ix-more">Read more<i class="btn-sjr"></i></div>
             </a></div>
         </div>
-        <div class="fixbg" style="background-image: url(img/ixfixbg.jpg);"></div>
+        <!--<div class="fixbg" style="background-image: url(img/ixfixbg.jpg);"></div>-->
+        <div class="ibox-banner">
+        	<div class="item"><img src="img/ibanner1.jpg" class="pimg"/></div>
+        	<div class="item"><img src="img/ibanner2.jpg" class="pimg"/></div>
+        	<div class="item"><img src="img/ibanner3.jpg" class="pimg"/></div>
+        </div>
     </div>
     
     <div class="ix2 clearfix scroll-animation">
@@ -406,6 +411,20 @@
 <script src="js/page.js"></script>
 <script>
     $(function(){
+    	jQuery(".ibox-banner").slick({
+	    	slide:".item",
+	        autoplay: true,
+	        arrows: false,
+	        dots: true,
+	        infinite: true,
+	        easing: "easeInOutExpo",
+	        speed: 1000,
+	        autoplaySpeed: 5000,
+	        pauseOnHover: false,
+	        fade: true,
+	        draggable: false,
+	        touchMove: false
+	    });
         var maxnum = $('.ix-cul-list .item').length;
         maxnum = maxnum > 9 ? maxnum : '0' + maxnum;
         $('.cul-nums .anum').html(maxnum);

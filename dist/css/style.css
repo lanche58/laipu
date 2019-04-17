@@ -890,6 +890,11 @@ a.pswp__share--download:hover{background:#ddd}
 .ix1 .ix-ab-ti .pa{padding:109px 0 0 240px}
 .ix1 .ix-ab{width:34%;height:330px;float:right}
 .ix1 .fixbg{padding-bottom:35%;background-attachment:scroll}
+.ibox-banner{ position: relative; overflow: hidden;}
+.ibox-banner .pimg{ width: 100%; display: block;}
+.ibox-banner .slick-active .pimg { visibility: visible !important; -webkit-animation: scaleUpDown 3s forwards cubic-bezier(0.250, 0.460, 0.450, 0.940); animation: scaleUpDown 3s forwards cubic-bezier(0.250, 0.460, 0.450, 0.940);}
+.ibox-banner .slick-dots li{ background-color: #F2F2F2; background-color: rgba(255,255,255,0.8);}
+.ibox-banner .slick-dots li.slick-active{ background-color: #113E98; background-color: rgba(17,62,152,0.8);}
 .ix-ab-ti{color:#333}
 .ix-ab-ti .ti1{font-size:30px}
 .ix-ab-ti .ti2{font-size:50px}
@@ -1020,10 +1025,12 @@ a.pswp__share--download:hover{background:#ddd}
 .ix-arrow .slick-prev{left:10px}
 .ix-arrow .slick-next{right:10px}
 .ab-pw2{width:1100px;margin:0 auto}
+.honor-title{ padding: 0px 0 30px; font-size: 24px; color: #333; text-align: center;}
 .honor-list{margin-left:-42px}
 .honor-list a{float:left;width:25%;margin-bottom:55px}
 .honor-list .ma{margin-left:42px}
 .honor-list .pai{padding-bottom:127.45902%}
+.honor-list2 .pai{padding-bottom:71.4%}
 .honor-list .pai:after{content:"";position:absolute;top:0;bottom:0;left:0;right:0;background:url(../images/black5.png);background:rgba(13,78,152,.7);opacity:0;visibility:hidden;-webkit-transition:.4s;-moz-transition:.4s;transition:.4s}
 .honor-list .icon{display:block;z-index:9;position:absolute;left:0;right:0;top:50%;margin-top:-20px;text-align:center;font-size:30px;color:#fff;line-height:40px;-webkit-transform:translateY(-100%);-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);transform:translateY(-100%);opacity:0;visibility:hidden;-webkit-transition:.4s;-moz-transition:.4s;transition:.4s}
 .honor-list .nowti{margin-top:15px;padding:0 5%;height:20px;line-height:20px;text-align:center}
@@ -1511,6 +1518,7 @@ a.pswp__share--download:hover{background:#ddd}
 .ix4,.ix5{padding-left:70px;padding-right:70px}
 }
 @media screen and (max-width:861px){
+.ibox-banner .pimg{ width: 120%; margin-left: -10%;}
 .pbanner .pic2{height:43vw}
 .pbanner .pic2 img{object-fit:cover;height:100%}
 .footer .f-ma{display:none}
@@ -1575,6 +1583,8 @@ a.pswp__share--download:hover{background:#ddd}
 .ix4,.ix5{padding-left:5%;padding-right:5%}
 }
 @media screen and (max-width:641px){
+.ibox-banner .pimg{ width: 130%; margin-left: -15%;}
+.ibox-banner .slick-dots li{ width: 7px; height: 7px; margin: 0px 4px;}
 .header,.mtop{height:60px}
 .header .logo>img{margin:6px 0 0 15px;-webkit-transform-origin:left center;-moz-transform-origin:left center;-ms-transform-origin:left center;transform-origin:left center;-webkit-transform:scale(.8);-moz-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8)}
 .header .logo{width:150px}
@@ -1617,6 +1627,7 @@ a.pswp__share--download:hover{background:#ddd}
 .cul-list li:nth-child(2n-1) .pic{float:none}
 .cul-list .txts{padding-top:6.67vw;padding-bottom:6.67vw}
 .cul-list .ch{margin-top:12.5vw}
+.honor-title{ font-size: 20px;}
 .honor-list .ma{margin-left:15px}
 .honor-list{margin-left:-15px}
 .honor-list a{margin-bottom:5.83vw}

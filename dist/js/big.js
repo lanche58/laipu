@@ -297,6 +297,7 @@
 
     };
 
-    initPhotoSwipeFromDOM('#sbi');
+    initPhotoSwipeFromDOM('#sbi1');
+    initPhotoSwipeFromDOM('#sbi2');
 
 })();
