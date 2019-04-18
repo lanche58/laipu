@@ -197,7 +197,7 @@ var Video = {
 			height: '100%',
 			aspectratio: '16:9',
 			stretching: 'fill',
-			controls: 'true',
+			controls: objs.controls,
 			autostart: objs.isautoplay
 		});
 		return objplay;

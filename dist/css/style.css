@@ -868,17 +868,19 @@ a.pswp__share--download:hover{background:#ddd}
 .footer .f-ma{float:right;margin-top:-25px}
 .footer .c{padding:50px 0 25px 0;border-bottom:1px solid #e5e5e5}
 .footer .b{padding:11px 0}
-.f-share{line-height:46px}
-.f-share a{width:46px;height:46px;border-radius:100%;background:#333;font-size:24px;color:#124bbe}
-.f-share a+a{margin-left:2px}
+/* 2019/4/18 */
+.f-share{ line-height: 46px; }
+.f-share a{ float: none !important; width:46px;height:46px !important;line-height:46px !important;border-radius:100%;background:#6990df !important;font-size:24px !important;color:#124bbe !important; opacity: 1 !important; }
+.f-share a+a{margin-left:2px !important;}
 .f-share p{margin-right:20px}
+/* 2019/4/18 */
 .f-cta p{float:left;margin-right:25px}
 .f-nav a{float:left;margin-right:35px}
 .f-ma{line-height:20px}
 .f-ma img{width:89px;border:1px solid #e5e5e5;float:left}
 .f-ma p{float:left;padding-top:25px;margin-left:10px}
 @media screen and (min-width:1025px){
-.f-share a:hover{background:#fff;color:#124bbe!important}
+.f-share a:hover{background:#fff !important;color:#124bbe!important}
 .footer a:not(.na):hover{color:#124bbe}
 }
 #top{position:fixed;z-index:9999;right:15px;bottom:15px;width:60px;height:60px;border-radius:100%;background:#124bbe;line-height:60px;text-align:center;color:#fff;text-transform:uppercase;cursor:pointer;-webkit-transform:translateY(20px);-moz-transform:translateY(20px);-ms-transform:translateY(20px);transform:translateY(20px);opacity:0;visibility:hidden;-webkit-transition:.4s;-moz-transition:.4s;transition:.4s}
@@ -972,7 +974,7 @@ a.pswp__share--download:hover{background:#ddd}
 .ix-pro-list a:hover,.ix-pro-list a:hover .nowti{color:#124bbe}
 }
 .ix-pro-bg{width:33.33%;height:868px;float:left;overflow:hidden}
-.ix-pro-bg .animateme{position:relative;left:-100%;height:100%;width:200%;background-position:center center;background-repeat:no-repeat;background-size:cover}
+.ix-pro-bg .animateme{position:relative;left:-100%;height:100%;width:200%;background-position:center right;background-repeat:no-repeat;background-size:cover}
 .ix-ser-list li{width:50%;float:left}
 .ix-ser-list li+li .b{border-left:1px solid #3d6da2}
 .ix-ser-list .nowti{padding-left:20px;margin-bottom:25px;line-height:20px;color:#124bbe}
@@ -1796,3 +1798,8 @@ a.pswp__share--download:hover{background:#ddd}
 .ab-link-list .tx{font-size:18px;height:52px;line-height:26px!important}
 .online-message-form .s-input{padding-left:10px;padding-right:10px}
 }
+
+/* 2019/4/18 */
+#ivideo{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.ibox-banner .pimg.hide{ opacity: 0; visibility: hidden; }
+/* 2019/4/18 */

@@ -197,8 +197,10 @@ var Video = {
 			height: '100%',
 			aspectratio: '16:9',
 			stretching: 'fill',
-			controls: 'true',
-			autostart: objs.isautoplay
+			controls: objs.controls,
+            autostart: objs.autostart,
+            repeat: objs.repeat,
+            preload: true
 		});
 		return objplay;
 	}

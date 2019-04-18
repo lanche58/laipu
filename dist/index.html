@@ -239,9 +239,19 @@
         </div>
         <!--<div class="fixbg" style="background-image: url(img/ixfixbg.jpg);"></div>-->
         <div class="ibox-banner">
-        	<div class="item"><img src="img/ibanner1.jpg" class="pimg"/></div>
-        	<div class="item"><img src="img/ibanner2.jpg" class="pimg"/></div>
-        	<div class="item"><img src="img/ibanner3.jpg" class="pimg"/></div>
+            <div class="item">
+                <img src="img/ibanner1.jpg" class="pimg"/>
+                <!-- 如果没有视频data-video-url="" -->
+                <a class="ivideo" data-video-url="img/video.mp4" data-video-image="img/ibanner1.jpg"></a>
+            </div>
+            <div class="item">
+                <img src="img/ibanner2.jpg" class="pimg"/>
+                <a class="ivideo" data-video-url="" data-video-image=""></a>
+            </div>
+            <div class="item">
+                <img src="img/ibanner3.jpg" class="pimg"/>
+                <a class="ivideo" data-video-url="img/video.mp4" data-video-image="img/ibanner1.jpg"></a>
+            </div>
         </div>
     </div>
     
@@ -370,13 +380,13 @@
 <div class="footer">
     <div class="t">
         <div class="pw">
-            <div class="f-share fib">
+            <div class="f-share bdsharebuttonbox fib">
                 <p class="ib">分享</p>
-                <a href="img/ma.jpg" class="ib icon iconfont icon-wechat weixin"></a>
-                <a href="#" class="ib icon iconfont icon-qq"></a>
-                <a href="#" class="ib icon iconfont icon-weibo"></a>
-                <a href="#" class="ib icon iconfont icon-tengxunweibo"></a>
-                <a href="#" class="ib icon iconfont icon-QQkongjian"></a>
+                <a href="javascript:;" data-cmd="weixin" class="ib icon iconfont icon-wechat"></a>
+                <a href="javascript:;" data-cmd="sqq" class="ib icon iconfont icon-qq"></a>
+                <a href="javascript:;" data-cmd="tsina" class="ib icon iconfont icon-weibo"></a>
+                <a href="javascript:;" data-cmd="tqq" class="ib icon iconfont icon-tengxunweibo"></a>
+                <a href="javascript:;" data-cmd="qzone" class="ib icon iconfont icon-QQkongjian"></a>
             </div>
         </div>
     </div>
@@ -406,25 +416,73 @@
 </div>
 <div id="top">top</div>
 <script src="js/plugin.js"></script>
-
+<script src="js/video/player.mini.js"></script>
 <script src="js/scrollme.js"></script>
 <script src="js/page.js"></script>
 <script>
+    window._bd_share_config = {
+        common : {
+            bdText : '自定义分享内容', 
+            bdDesc : '自定义分享摘要', 
+            bdUrl : '自定义分享url地址',   
+            bdPic : '自定义分享图片'
+        },
+        share : [{}]
+    }
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
     $(function(){
+        var old = null;
+        function isVideo(Obj) {
+            if (isMobile) { return; }
+            var len = $('#ivideo').length;
+            if (len) {
+                $('#ivideo').after(old);
+                objplay.stop(); 
+                $('#ivideo').remove();
+            }
+            var url = Obj.attr('data-video-url');
+            if (url) {
+                var img = Obj.attr('data-video-image');
+                Obj.attr('id','ivideo');
+                Obj.siblings('.pimg').addClass('hide');
+                Video.load({
+                    vcontainer: 'ivideo',
+                    vfimg: img,
+                    vfiles: url,
+                    autostart: true,
+                    controls: false,
+                    repeat: true
+                });
+                old = Obj.clone().attr('id','');
+            }
+        }
+        $('.ibox-banner').on('init', function(event, slick, currentSlide, nextSlide) {
+            var $first = $('.ibox-banner .item').first().find('.ivideo');
+            isVideo($first);
+        });
     	jQuery(".ibox-banner").slick({
 	    	slide:".item",
-	        autoplay: true,
 	        arrows: false,
 	        dots: true,
 	        infinite: true,
 	        easing: "easeInOutExpo",
-	        speed: 1000,
-	        autoplaySpeed: 5000,
 	        pauseOnHover: false,
 	        fade: true,
 	        draggable: false,
-	        touchMove: false
-	    });
+            touchMove: false,
+            responsive: [{
+                breakpoint: 1025,
+                settings: {
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    speed: 800
+                }
+            }
+            ]
+	    }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            var $video = $('.ibox-banner .item').eq(nextSlide).find('.ivideo');
+            isVideo($video);
+        });
         var maxnum = $('.ix-cul-list .item').length;
         maxnum = maxnum > 9 ? maxnum : '0' + maxnum;
         $('.cul-nums .anum').html(maxnum);
@@ -460,6 +518,7 @@
                 '-webkit-transition-delay': 200*i + 'ms'
             })
         });
+        // $('#ivideo')
     })
 </script>
 </body>

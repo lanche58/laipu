@@ -338,6 +338,7 @@
                     map.openInfoWindow(infoWindow,point);
                 }  
             });
+            map.addControl(new BMap.NavigationControl());
         };
         var k='<p style="font-size: 18px; color: #666;">地址：四川省绵阳市游仙区游仙东路89号</p><p style="font-size: 18px; color: #666;">邮编：621000</p>'; 
         ShowMap('104.018887,30.723201', k, '17');
