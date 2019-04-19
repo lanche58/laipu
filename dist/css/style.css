@@ -1376,7 +1376,7 @@ a.pswp__share--download:hover{background:#ddd}
 .pro-cta .txts{padding-left:40px}
 .pro-cta .en{left:40px}
 .pnav li{padding:0 10px}
-.pnav li>a{padding-left:4px;padding-right:4px}
+.pnav li>a{padding-left:4px;padding-right:4px; font-size: 16px;}
 .case-pw,.pro4{width:1000px}
 .prot-list .txts{padding-top:50px}
 .flow-list{padding:0}
@@ -1447,7 +1447,7 @@ a.pswp__share--download:hover{background:#ddd}
 .header .bodr{right:-130px}
 .pnav{height:60px;position:relative}
 .pnav ul{position:absolute;left:0;top:0;white-space:nowrap;min-width:100%;overflow:hidden;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.pnav li>a{padding-top:18px;padding-bottom:18px}
+.pnav li>a{padding-top:18px;padding-bottom:18px; font-size: 14px;}
 .header .menu-btn{display:block}
 .footer .f-nav{display:none}
 #top{display:block}
