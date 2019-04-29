@@ -735,9 +735,9 @@ a.pswp__share--download:hover{background:#ddd}
 .header .h-news{float:right;height:100%;width:34%;background:#333}
 .header .c{position:relative;margin:0 34% 0 240px;height:100%}
 .header .bodr{display:block;position:absolute;z-index:19;left:0;right:0;bottom:0;height:1px;background:#e5e5e5}
-.header .nav{padding-left:6%;float:left;width:673px;background:#fff}
+.header .nav{padding-left:6%;float:left;width:665px;background:#fff}
 .header .nav li{position:relative;padding:0 11px;float:left}
-.header .nav li>a{display:block;position:relative;padding:32px 6px;color:#333}
+.header .nav li>a{display:block;position:relative;padding:32px 6px;color:#333;font-size: 16px;}
 .header .nav li>a:before{content:"";position:absolute;bottom:0;left:0;width:0;height:1px;background:#124bbe;-webkit-transition:.3s;-moz-transition:.3s;transition:.3s;z-index:29}
 .header .nav li>a.act{color:#124bbe}
 .header .nav li>a.act:before{width:100%}
@@ -819,7 +819,7 @@ a.pswp__share--download:hover{background:#ddd}
 .active .fadeIn i{-webkit-animation:fadeIn 1s both;-moz-animation:fadeIn 1s both;animation:fadeIn 1s both}
 .pnav{border-bottom:1px solid #ccc;line-height:24px}
 .pnav li{padding:0 12px;position:relative}
-.pnav li>a{display:block;position:relative;padding:19px 6px;font-size: 16px;}
+.pnav li>a{display:block;position:relative;padding:19px 6px; font-size: 16px; }
 .pnav li>a:before{content:"";position:absolute;bottom:0;left:0;width:0;height:1px;background:#124bbe;-webkit-transition:.3s;-moz-transition:.3s;transition:.3s}
 .pnav li>a.act{color:#124bbe}
 .pnav li>a.act:before{width:100%}
@@ -1325,7 +1325,7 @@ a.pswp__share--download:hover{background:#ddd}
 @media screen and (max-width:1600px){
 .h-lang>p{padding-left:30px;padding-right:30px}
 .header .nav li{padding:0 8px}
-.header .nav{width:580px;padding-left:3%;}
+.header .nav{width:625px;padding-left:3%;}
 .f-nav{width:345px}
 .f-nav a{width:80px}
 .cta-tx{padding:50px 45px 0 45px}
@@ -1337,6 +1337,7 @@ a.pswp__share--download:hover{background:#ddd}
 .cta-tx .case-ti{font-size:28px}
 .header .nav li { padding: 0px 4px; }
 .header .nav{ width: 520px; }
+.header .nav li>a{ font-size: 14px; }
 }
 @media screen and (max-width:1366px){
 .header .logo{width:200px}
