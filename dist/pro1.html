@@ -308,6 +308,76 @@
 </div>
 
 <div class="container">
+    <div class="pro-nav">
+        <ul>
+            <li><a href="pro1.html">半制备/制备液相色谱系统</a>
+                <div class="b">
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                </div>
+            </li>
+            <li><a href="pro1.html">中试放大制备液相色谱系统</a>
+                <div class="b">
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                </div>
+            </li>
+            <li><a href="pro1.html">工业化制备液相色谱系统</a>
+                <div class="b">
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                </div>
+            </li>
+            <li><a href="pro1.html">制备色谱系统组件</a>
+                <div class="b">
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                </div>
+            </li>
+            <li><a href="pro1.html">样品制备及分离纯化解决方案服务</a>
+                <div class="b">
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                </div>
+            </li>
+            <li><a href="pro1.html">其他</a>
+                <div class="b">
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                    <a href="pro1.html">&gt;&nbsp;GL6000-25ml系统</a>
+                </div>
+            </li>
+        </ul>
+    </div>
     <div class="pro4 page-pa">
         <div class="prot-list">
             <a href="pro-detail.html" class="clearfix prot-more-h">
@@ -380,5 +450,35 @@
 <script src="js/plugin.js"></script>
 
 <script src="js/page.js"></script>
+<script>
+    $(function(){
+        $('.pro-nav li > a').bind(_click, function(e) {
+            var $next = $(this).next(),
+                nextlen = $next.size();
+            var $sib = $(this).parent().siblings();
+            var _act = $(this).hasClass('act');
+            if (nextlen && !_act) {
+                e.preventDefault();
+                $sib.find('.b').stop().slideUp();
+                $next.stop().slideDown();
+                $sib.children('a').removeClass('act');
+                $(this).addClass('act');
+            }
+        });
+
+        function scrollFix() {
+            if (isMobile) { return; }
+            var st = $(window).scrollTop(),
+                pt = $('.container').offset().top - $mtoph;
+            st > pt ? $('.pro-nav').addClass('fix') : $('.pro-nav').removeClass('fix');
+        }
+
+        scrollFix();
+
+        $(window).scroll(function() {
+            scrollFix();
+        });
+    })
+</script>
 </body>
 </html>
